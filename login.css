@@ -1,45 +1,46 @@
+body {
+  margin: 0;
+  font-family: "Kavoon", sans-serif;
+}
+
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2px 5px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2F2D2E;
+  color: #FDFFFC;
 
-    background-color: #2F2D2E;
-  }
-  
+}
 
-  
-  .nav-item {
-    padding: 50px;
-    text-decoration: none;
-    color: #FDFFFC;
-    font-size: 21px;
-    margin-right: 20px;
-  }
-  
-  .nav-item.active {
-    background-image:url(./Logo-ValdeBurger-removebg.png);
-    background-size: cover;
-    background-position: center;
-    width: 10px;
-  }
-  
-  .right-section {
-    display: flex;
-    align-items: center;
-    float: right;
-  }
-  .middle-section a{
-    font-family: "Kavoon", sans-serif;
-    float: right;
-  }
-  
-  .middle-section {
-    display: flex;
-    align-items: center;
-  }
-  
+.navbar .logo img {
+  height: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 50px;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links li a:hover, .icono-usuario a:hover {
+  color: #ECA400;
+  border-color: #ECA400;
+}
+
+.container{
+  top: 0;;
+  width: 100%;
+  height: 100%;
+  background-color: #ECA400;
+}
