@@ -1,0 +1,74 @@
+body {
+    font-family: "Kavoon", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .section-header {
+    font-size: 70px;
+    color: #333;
+    text-align: center;
+    margin: 40px 0 20px;
+  }
+  
+  .menu-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas */
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 350px; /* Ancho más pequeño de las tarjetas */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio adicional si las filas no están alineadas */
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .card-title {
+    color: #333;
+    font-size: 1em; /* Tamaño de fuente más pequeño */
+    margin: 8px 0;
+  }
+  
+  .card-description {
+    color: #777;
+    font-size: 0.8em; /* Tamaño de fuente más pequeño */
+  }
+  
+  .card-price {
+    color: #e74c3c;
+    font-size: 1.2em; /* Tamaño de fuente más pequeño */
+    margin: 4px 0;
+  }
+
+  
+  
+  
+  /* Media queries para pantallas más pequeñas */
+  @media (max-width: 1200px) {
+    .menu-section {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas para pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .menu-section {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-section {
+      grid-template-columns: 1fr; /* 1 columna para pantallas muy pequeñas */
+    }
+  }
