@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Kavoon", sans-serif;
+  background-color: #ffc515;
 }
 
 .navbar {
@@ -9,11 +10,11 @@ body {
   align-items: center;
   background-color: #2F2D2E;
   color: #FDFFFC;
-
+  padding: 20px;
 }
 
 .navbar .logo img {
-  height: 100px;
+  height: 80px;
 }
 
 .nav-links {
@@ -30,17 +31,68 @@ body {
 
 .nav-links li a {
   text-decoration: none;
-  color: #fff;
+  color: #FDFFFC;
 }
 
 .nav-links li a:hover, .icono-usuario a:hover {
-  color: #ECA400;
-  border-color: #ECA400;
+  color: #F14A41;
 }
 
-.container{
-  top: 0;;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
-  height: 100%;
-  background-color: #ECA400;
+  margin-top: 50px;
+}
+
+.logo-login img {
+  width: 80%;
+  height: auto;
+}
+
+.iniciosesion-correo, .iniciosesion-contra, .iniciar-sesion, .logo-login {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.titulo-iniciosesion{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.iniciosesion-correo input, .titulo-iniciosesion p,
+.iniciosesion-contra input, .iniciar-sesion button{
+
+  font-family: "Kavoon", sans-serif;
+  border-radius: 5%;
+}
+
+.iniciar-sesion button{
+  border-radius: 9%;
+  padding: 2%;
+  background-color:#ffc515 ;
+  cursor: pointer;
+}
+
+.iniciar-sesion button:hover{
+  background-color: #F14A41;
+  color: #ffc515;
+}
+.casilla-iniciarsesion{
+  background-color: #2F2D2E;
+  width: 15%;
+  height: 30%;
+  padding: 4%;
+  border: white solid 5px;
+  border-radius: 5%;
+}
+.titulo-iniciosesion p{
+  font-size: 30px;
+  color: #ffc515;
 }

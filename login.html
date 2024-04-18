@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <meta name = "description" content="Ejercicios laboratorio Unidad 4"/>
-        <meta name = "author" content="Victor_Sierra"/>
+        <meta name = "description" content="Pagina web ValdeBurger"/>
+        <meta name = "author" content="Victor_Sierra-Daniel-Aguaron"/>
         <link rel="stylesheet" href="./login.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +13,15 @@
     <body>
         <nav class="navbar">
             <div class="logo">
-              <img src="./Logo-ValdeBurger-removebg.jpg">
+              <a href="#"><img src="./Logo-ValdeBurger.png"></a>
             </div>
             <ul class="nav-links">
               <li><a href="#">INICIO</a></li>
               <li><a href="#">SOBRE NOSOTROS</a></li>
-              <li><a href="#">SERVICIOS</a></li>
+              <li><a href="#">CARTA</a></li>
               <li><a href="#">CONTACTO</a></li>
               <li><a href="#">¡PIDE YA!</a></li>
-              <li> <span class="icono-usuario"><a href="#"><svg
+              <li> <span class="icono-usuario"><a href="./login.html"><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -34,13 +34,44 @@
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
             </svg></a></span></li>
+            <li><span class="icono-carrito"><a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.6 13.34a1 1 0 0 0 1 .66h11.72a1 1 0 0 0 .98-.78l3.1-10H6.42"></path>
+              </svg>
+            </a></span></li>
             </ul>
           </nav>
         <div class="container">
-            <span class="curva-home"></span>
-            <svg width="681" height="261" viewBox="0 0 681 261" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M317.5 61.9467C177.397 131.947 65.8817 170.78 0 126.447V260.947C0 260.947 382 151.447 488 178.947C594 206.447 681 260.947 681 260.947V92.9466C455.5 -43.5533 457.603 -8.05332 317.5 61.9467Z" fill="#F14A41"/>
-                </svg>                          
+          <div class="casilla-iniciarsesion">
+            <div class="titulo-iniciosesion">
+              <p>INICIAR SESIÓN</p>
+            </div>
+            <div class="logo-login">
+              <img src="./Logo-ValdeBurger.png" alt="">
+            </div>
+            <form id="formulario-iniciosesion">
+              <div class="iniciosesion-correo">
+                <input type="email" id="correo" name="correo" required placeholder="E-mail">
+              </div>
+              <div class="iniciosesion-contra">
+                <input type="password" id="contraseña" name="contraseña" required placeholder="Contraseña">
+              </div>
+              <div class="iniciar-sesion">
+                <button type="submit">INICIAR SESIÓN</button>
+              </div>
+            </form> 
+          </div>                   
         </div>
-</body>
+  </body>
 </html>
