@@ -18,11 +18,25 @@ header {
     padding: 20px;
 }
 
-ol {
-    margin-left: 20px;
+p {
+    margin-bottom: 15px;
 }
 
-ol li {
+.product {
+    margin-bottom: 30px;
+}
+
+.product img {
+    max-width: 100%;
+    display: block;
     margin-bottom: 10px;
 }
 
+.product h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.product p {
+    margin-bottom: 0;
+}
