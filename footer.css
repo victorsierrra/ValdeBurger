@@ -44,7 +44,7 @@ footer {
   }
   
   .footer-bottom p {
-    margin: 0;
+    margin: 0 auto;
     font-weight: bold;
   }
   
