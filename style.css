@@ -37,3 +37,29 @@ body {
 .nav-links li a:hover, .icono-usuario a:hover {
   color: #F14A41;
 }
+.container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 70px;
+  padding: 20px;
+  background-color: #FDFFFC;
+  /*box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  border-radius: 8px;
+  width: 500px;
+}
+.primer-parrafo{
+  
+}
+
+.primer-parrafo h1 {
+  color: #F14A41;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.primer-parrafo p {
+  color: #333;
+  font-size: 20px;
+}
