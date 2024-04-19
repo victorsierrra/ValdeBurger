@@ -1,74 +1,86 @@
 body {
-    font-family: "Kavoon", sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  .section-header {
-    font-size: 70px;
-    color: #333;
-    text-align: center;
-    margin: 40px 0 20px;
-  }
-  
-  .menu-section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas */
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 350px; /* Ancho más pequeño de las tarjetas */
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 20px; /* Espacio adicional si las filas no están alineadas */
-  }
-  
-  .card img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .card-title {
-    color: #333;
-    font-size: 1em; /* Tamaño de fuente más pequeño */
-    margin: 8px 0;
-  }
-  
-  .card-description {
-    color: #777;
-    font-size: 0.8em; /* Tamaño de fuente más pequeño */
-  }
-  
-  .card-price {
-    color: #e74c3c;
-    font-size: 1.2em; /* Tamaño de fuente más pequeño */
-    margin: 4px 0;
-  }
+  font-family: "Kavoon", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
 
-  
-  
-  
-  /* Media queries para pantallas más pequeñas */
-  @media (max-width: 1200px) {
-    .menu-section {
-      grid-template-columns: repeat(3, 1fr); /* 3 columnas para pantallas medianas */
-    }
+.section-header {
+  font-size: 70px;
+  color: #333;
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.menu-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columns layout */
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  perspective: 1000px; /* Perspective for 3D effect */
+  margin-bottom: 20px; /* Consistent bottom margin */
+  height: 550px; /* Fixed height to maintain layout consistency */
+  width: 550px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-front {
+  background-color: #fff; /* Background color for front of card */
+}
+
+.card-front img {
+  width: 80%;
+}
+
+.card-back {
+  background-color: #f8f8f8; /* Slightly different background to distinguish */
+  color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 1200px) {
+  .menu-section {
+      grid-template-columns: repeat(3, 1fr); /* Adjust columns for medium screens */
   }
-  
-  @media (max-width: 768px) {
-    .menu-section {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas pequeñas */
-    }
+}
+
+@media (max-width: 768px) {
+  .menu-section {
+      grid-template-columns: repeat(2, 1fr); /* Adjust columns for small screens */
   }
-  
-  @media (max-width: 480px) {
-    .menu-section {
-      grid-template-columns: 1fr; /* 1 columna para pantallas muy pequeñas */
-    }
+}
+
+@media (max-width: 480px) {
+  .menu-section {
+      grid-template-columns: 1fr; /* Single column layout for very small screens */
   }
+}
