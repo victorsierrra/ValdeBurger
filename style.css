@@ -11,6 +11,7 @@ body {
   background-color: #2F2D2E;
   color: #FDFFFC;
   padding: 20px;
+  width: 100%;
 }
 
 .navbar .logo img {
@@ -37,21 +38,42 @@ body {
 .nav-links li a:hover, .icono-usuario a:hover {
   color: #F14A41;
 }
-.container {
+.primera-division {
   max-width: 1200px;
+  margin-left: 20px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   margin-top: 70px;
   padding: 20px;
   background-color: #FDFFFC;
-  /*box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
   border-radius: 8px;
-  width: 500px;
+  width: 600px;
 }
-/*.primer-parrafo{
-  
-}*/
+.segunda-division {
+  max-width: 1200px;
+  margin-right: 100px;
+  display: flex;
+  float: right;
+  /*  flex-direction: row-reverse;*/
+  margin-top: 70px;
+  padding: 20px;
+  background-color: #FDFFFC;
+  border-radius: 8px;
+  width: 600px;
+}
+.primer-parrafo{
+  float:right;
+  max-width: 60%;
+ /* margin-left: 20px;*/
+}
+
+.burger-primer-parrafo, .logo-segundo-parrafo{
+  width: 40%;
+  height: auto;
+}
+.burger-primer-parrafo img, .logo-segundo-parrafo img{
+  width: 330px;
+  height: auto;
+}
 
 .primer-parrafo h1 {
   color: #F14A41;
@@ -60,6 +82,6 @@ body {
 }
 
 .primer-parrafo p {
-  color: #333;
+  color: #2F2D2E;
   font-size: 20px;
 }
