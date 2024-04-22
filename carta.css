@@ -14,16 +14,25 @@ body {
 
 .menu-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 4 columns layout */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
   justify-content: center;
 }
 
 .card {
-  perspective: 1000px; /* Perspective for 3D effect */
-  margin-bottom: 20px; /* Consistent bottom margin */
-  height: 550px; /* Fixed height to maintain layout consistency */
+  perspective: 1000px; 
+  margin-bottom: 20px; 
+  height: 550px; 
   width: 550px;
+}
+
+.card-price {
+  color: #e74c3c; 
+  font-size: 1.4em; 
+  font-weight: bold; 
+  padding: 5px 20px; 
+  transition: all 0.3s ease-in-out; 
+  margin-top: 8px; 
 }
 
 .card-inner {
@@ -49,16 +58,22 @@ body {
 }
 
 .card-front {
-  background-color: #fff; /* Background color for front of card */
+  background-color: #fff; 
 }
 
 .card-front img {
   width: 80%;
 }
 
+.card-description {
+  margin-left: 15px;
+  margin-right: 15px;
+
+}
+
 .card-back {
-  background-color: #f8f8f8; /* Slightly different background to distinguish */
-  color: #333;
+  background-color: #2F2D2E; 
+  color: #FDFFFC;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -66,21 +81,21 @@ body {
   align-items: center;
 }
 
-/* Media queries for responsive adjustments */
+
 @media (max-width: 1200px) {
   .menu-section {
-      grid-template-columns: repeat(3, 1fr); /* Adjust columns for medium screens */
+      grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .menu-section {
-      grid-template-columns: repeat(2, 1fr); /* Adjust columns for small screens */
+      grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 480px) {
   .menu-section {
-      grid-template-columns: 1fr; /* Single column layout for very small screens */
+      grid-template-columns: 1fr; 
   }
 }
