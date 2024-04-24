@@ -62,7 +62,8 @@ body {
 }
 
 .card-front img {
-  width: 80%;
+  width: 65%;
+  height: 60%;
 }
 
 .card-description {
