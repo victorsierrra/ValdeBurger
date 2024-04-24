@@ -51,7 +51,7 @@ footer {
   .social-media {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrar el texto */
+    justify-content: center; 
   }
   
   .social-media a {

@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F2D2E;
+    color: #FDFFFC;
+    padding: 20px;
+  }
+  
+  .navbar .logo img {
+    height: 80px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+  }
+  
+  .nav-links li {
+    margin-right: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #FDFFFC;
+  }
+  
+  .nav-links li a:hover, .icono-usuario a:hover {
+    color: #F14A41;
+  }
