@@ -47,18 +47,20 @@ body {
   margin-top: 50px;
 }
 
-.logo-login img {
+.logo-login img, .logo-registrarse img {
   width: 80%;
   height: auto;
 }
 
-.iniciosesion-correo, .iniciosesion-contra, .iniciar-sesion, .logo-login {
+.iniciosesion-correo, .iniciosesion-contra, .iniciar-sesion,
+.logo-login, .registro-correo, .registro-contra,
+.registrarse, .logo-registrarse, .Tener-cuenta, .No-tener-cuenta {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 20px;
 }
-.titulo-iniciosesion{
+.titulo-iniciosesion, .titulo-registro{
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -67,32 +69,35 @@ body {
 }
 
 .iniciosesion-correo input, .titulo-iniciosesion p,
-.iniciosesion-contra input, .iniciar-sesion button{
+.iniciosesion-contra input, .iniciar-sesion button,
+.registro-correo input, .registro-contra input,
+.titulo-registro p, .registrarse button{
 
   font-family: "Kavoon", sans-serif;
   border-radius: 5%;
 }
 
-.iniciar-sesion button{
+.iniciar-sesion button, .registrarse button{
   border-radius: 9%;
   padding: 2%;
   background-color:#ffc515 ;
   cursor: pointer;
 }
 
-.iniciar-sesion button:hover{
+.iniciar-sesion button:hover, .registrarse button:hover{
   background-color: #F14A41;
   color: #ffc515;
 }
-.casilla-iniciarsesion{
+.casilla-iniciarsesion, .casilla-registrarse{
   background-color: #2F2D2E;
-  width: 15%;
-  height: 30%;
+  width: 280px;
+  height: 550px;
   padding: 4%;
-  border: white solid 5px;
+  border: #FDFFFC solid 5px;
   border-radius: 5%;
+  margin: 30px;
 }
-.titulo-iniciosesion p{
+.titulo-iniciosesion p, .titulo-registro p{
   font-size: 30px;
   color: #ffc515;
 }
@@ -164,4 +169,14 @@ footer {
 
 .social-media a:hover img {
   filter: brightness(50%);
+}
+.No-tener-cuenta p, .Tener-cuenta p{
+  color: #ffc515;
+}
+.No-tener-cuenta a, .Tener-cuenta a{
+  text-decoration: none;
+  color: #F14A41;
+}
+.No-tener-cuenta a:hover,.Tener-cuenta a:hover{
+  text-decoration: underline;
 }
