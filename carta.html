@@ -9,9 +9,40 @@
 <link rel="stylesheet" href="footer.css">
 <link rel="stylesheet" href="carta.css">
 <link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="cookies.css">
 <title>Menú Completo</title>
 </head>
 <body>
+
+
+
+  <div id="cookieConsentPopup" class="cookie-consent-popup">
+    <div class="cookie-header">
+      <img src="./imagenes/cookie.webp" alt="Icono de Cookie" class="cookie-icon">
+      <h2>Política de Cookies</h2>
+    </div>
+    <p>Utilizamos cookies para asegurar que te damos la mejor experiencia en nuestra página de hamburguesas.</p>
+    <button onclick="toggleCookieDetails()">Ver más</button>
+    <div id="cookieDetails" style="display:none;">
+      <p><strong>Cookies necesarias:</strong> Estas cookies son esenciales para el funcionamiento de la página web.</p>
+      <p><strong>Cookies de análisis:</strong> Nos permiten analizar cómo interactúan los usuarios con la página, mejorando así nuestro servicio.</p>
+    </div>
+    <div class="buttons">
+      <button onclick="acceptCookies()">Aceptar</button>
+      <button onclick="rejectCookies()">Rechazar</button>
+    </div>
+  </div>
+  
+  
+  <script src="cookies.js"></script>
+
+
+
+
+
+
+
+
 
   <nav class="navbar">
     <div class="logo">

@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fondo más suave */
+  }
+  
+  .cookie-consent-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: auto;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    text-align: left;
+    z-index: 1000;
+  }
+
+  .cookie-header {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+  }
+
+  .cookie-icon {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  h2 {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    color: #333;
+    font-size: 18px;
+  }
+  
+  p {
+    color: #666; /* Gris oscuro para el texto */
+    font-size: 14px;
+    line-height: 1.5; /* Espaciado de línea para mejor lectura */
+  }
+  
+  .buttons button {
+    margin: 10px 10px 0 0; /* Ajuste en los márgenes */
+    padding: 10px 20px;
+    border: none;
+    background-color: #5cb85c; /* Verde más vivo */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Suaviza la transición del color */
+  }
+  
+  .buttons button:hover {
+    background-color: #4cae4c; /* Cambio de color al pasar el ratón */
+  }
+  
+  #cookieDetails {
+    background-color: #fafafa; /* Fondo más claro para los detalles */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1); /* Sombra interna sutil */
+    display: none; /* Inicialmente oculto */
+  }
+  
+  button {
+    font-weight: bold; /* Texto en negrita para los botones */
+  }
+  
+  
+  
+  
+  
