@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta name = "description" content="Pagina web ValdeBurger"/>
         <meta name = "author" content="Victor_Sierra-Daniel-Aguaron"/>
-        <link rel="stylesheet" href="./login.css">
+        <link rel="stylesheet" href="./register.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
@@ -54,28 +54,34 @@
             </ul>
           </nav>
         <div class="container">
-          <div class="casilla-iniciarsesion">
-            <div class="titulo-iniciosesion">
-              <p>INICIAR SESIÓN</p>
+          <div class="casilla-registrarse">
+            <div class="titulo-registro">
+              <p>REGISTRARSE</p>
             </div>
-            <div class="logo-login">
+            <div class="logo-registrarse">
               <img src="./imagenes/Logo-ValdeBurger.png" alt="">
             </div>
-            <form id="formulario-iniciosesion">
-              <div class ="No-tener-cuenta">
-                <p>¿NO TIENES CUENTA? <a href="./register.html">REGISTRATE YA</a></p>
+            <form id="formulario-registro">
+              <div class ="Tener-cuenta">
+                <p>¿TIENES YA CUENTA? <a href="./login.html">INICIA SESION</a></p>
               </div>
-              <div class="iniciosesion-correo">
+              <div class="registro-nombre">
+                <input type="text" id="nombre" name="Nombre" required placeholder="Nombre">
+              </div>
+              <div class="registro-apellido">
+                <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
+              </div>
+              <div class="registro-correo">
                 <input type="email" id="correo" name="correo" required placeholder="E-mail">
               </div>
-              <div class="iniciosesion-contra">
+              <div class="registro-contra">
                 <input type="password" id="contraseña" name="contraseña" required placeholder="Contraseña">
               </div>
-              <div class="iniciar-sesion">
-                <button type="submit">INICIAR SESIÓN</button>
+              <div class="registrarse">
+                <button type="submit">REGISTRARSE</button>
               </div>
             </form> 
-          </div>                
+          </div>                 
         </div>
   </body>
   <footer>
