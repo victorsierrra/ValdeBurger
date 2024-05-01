@@ -10,7 +10,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}    
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 7000); // Cambia imagen cada 2 segundos
+    setTimeout(showSlides, 70000); // Cambia imagen cada 70 segundos
 }
 
 document.querySelector(".prev").addEventListener("click", function(){
