@@ -156,8 +156,8 @@ body {
   }
   .carrusel {
     position: relative;
-    max-width: 800px; 
-    height: 800px;
+    max-width: 40%; 
+    height: 100%;
     margin: auto;
     overflow: hidden;
 }
