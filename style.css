@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: "Kavoon", sans-serif;
@@ -38,15 +43,28 @@ body {
   text-decoration: none;
   color: #FDFFFC;
 }
+  .nav-links li img{
+    height: 20px;
+  }
 
 .nav-links li a:hover, .icono-usuario a:hover {
   color: #F14A41;
 }
-.primera-division {
+.primera-division{
   max-width: 1200px;
   margin-left: 100px;
   display: flex;
   margin-top: 70px;
+  padding: 20px;
+  background-color: #FDFFFC;
+  border-radius: 8px;
+  width: 600px;
+}
+.tercera-division {
+  max-width: 1200px;
+  margin-left: 100px;
+  display: flex;
+  clear: both; /* Esto asegura que el div aparezca debajo de cualquier elemento flotante anterior */
   padding: 20px;
   background-color: #FDFFFC;
   border-radius: 8px;
@@ -57,7 +75,6 @@ body {
   margin-right: 100px;
   display: flex;
   float: right;
-  margin-top: 70px;
   padding: 20px;
   background-color: #FDFFFC;
   border-radius: 8px;
@@ -68,11 +85,11 @@ body {
   max-width: 60%;
 }
 
-.burger-primer-parrafo, .logo-segundo-parrafo{
+.burger-primer-parrafo, .logo-segundo-parrafo, .grafica-tercer-parrafo{
   width: 40%;
   height: auto;
 }
-.burger-primer-parrafo img, .logo-segundo-parrafo img{
+.burger-primer-parrafo img, .logo-segundo-parrafo img, .grafica-tercer-parrafo img{
   width: 330px;
   height: auto;
 }
