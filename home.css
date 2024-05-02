@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: "Kavoon", sans-serif;
@@ -38,7 +39,7 @@ body {
   .nav-links li a:hover, .icono-usuario a:hover {
     color: #F14A41;
   }
-  .container {
+  .container-carrusel {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -203,4 +204,28 @@ body {
 
 .next {
     right: 0;
+}
+
+.container-ubicacion {
+  margin-bottom: 80px;
+  font-size: 46px;
+  text-align: center;
+  left: 50%;
+  color: #F14A41;
+}
+.container-ubicacion p{
+  color: #2F2D2E;
+  font-size: 20px;
+}
+.primera-ubicacion, .segunda-ubicacion{
+  max-width: 1200px;
+  margin-right: 100px;
+  display: flex;
+  padding: 20px;
+  background-color: #FDFFFC;
+  border-radius: 8px;
+  width: 600px;
+}
+.mapa-ubicacion{
+  clear: both;
 }
