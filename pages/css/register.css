@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: "Kavoon", sans-serif;
+    background-color: #ffc515;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F2D2E;
+    color: #FDFFFC;
+    padding: 20px;
+  }
+  
+  .navbar .logo img {
+    height: 80px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+  }
+  
+  .nav-links li {
+    margin-right: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #FDFFFC;
+  }
+  
+  .nav-links li a:hover, .icono-usuario a:hover {
+    color: #F14A41;
+  }
+  .icono-usuario svg{
+    color: #F14A41;
+  }
+  .icono-usuario svg:hover{
+    color: #FDFFFC;
+  }
+  .nav-links li img{
+    height: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  .logo-registrarse img {
+    width: 80%;
+    height: auto;
+  }
+  
+  .registro-apellido, .registro-correo, .registro-contra,
+  .registrarse, .logo-registrarse, .Tener-cuenta, .registro-nombre{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  .titulo-registro{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+  
+  .registro-contra input, .registro-nombre input, .registro-correo input,
+  .titulo-registro p, .registrarse button
+  , .registro-apellido input{
+  
+    font-family: "Kavoon", sans-serif;
+    border-radius: 5%;
+  }
+  
+  .registrarse button{
+    border-radius: 9%;
+    padding: 2%;
+    background-color:#ffc515 ;
+    cursor: pointer;
+  }
+  
+  .registrarse button:hover{
+    background-color: #F14A41;
+    color: #ffc515;
+  }
+  .casilla-registrarse{
+    background-color: #2F2D2E;
+    width: 280px;
+    height: 650px;
+    padding: 4%;
+    border: #FDFFFC solid 5px;
+    border-radius: 5%;
+    margin: 30px;
+  }
+  .titulo-iniciosesion p, .titulo-registro p{
+    font-size: 30px;
+    color: #ffc515;
+  }
+  footer {
+    background-color: #000;
+    color: #FDFFFC;
+    padding: 20px 0;
+    text-align: center;
+    font-family: "Kavoon", sans-serif;
+    margin-top: 50px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    color: #FDFFFC;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    margin: 0 auto;
+    font-weight: bold;
+  }
+  
+  .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-media a {
+    margin-right: 10px;
+  }
+  
+  .social-media img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-media a:hover img {
+    filter: brightness(50%);
+  }
+  .No-tener-cuenta p, .Tener-cuenta p{
+    color: #ffc515;
+  }
+  .No-tener-cuenta a, .Tener-cuenta a{
+    text-decoration: none;
+    color: #F14A41;
+  }
+  .No-tener-cuenta a:hover,.Tener-cuenta a:hover{
+    text-decoration: underline;
+  }
