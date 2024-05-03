@@ -53,11 +53,12 @@ body {
 }
 
 .registro-apellido, .registro-correo, .registro-contra,
-.registrarse, .logo-registrarse, .Tener-cuenta, .registro-nombre{
+.registrarse, .logo-registrarse, .Tener-cuenta, .registro-nombre, .registro-fecha{
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-top: 20px;
+  min-width: 100px;
 }
 .titulo-registro{
   display: flex;
@@ -67,7 +68,12 @@ body {
   margin-bottom: -10px;
 }
 
-.registro-contra input, .registro-nombre input, .registro-correo input,
+.registro-contra input, .registro-nombre input, .registro-fecha input, .registro-correo input
+, .registro-apellido input{
+  width: 150px;
+}
+
+.registro-contra input, .registro-nombre input, .registro-fecha input, .registro-correo input,
 .titulo-registro p, .registrarse button
 , .registro-apellido input{
 
