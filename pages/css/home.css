@@ -213,6 +213,7 @@ body {
 .container-ubicacion p{
   color: #2F2D2E;
   font-size: 20px;
+  height: 140px;
 }
 .mapa-ubicacion iframe {
   width: 100%;
