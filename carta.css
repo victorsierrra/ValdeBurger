@@ -1,14 +1,15 @@
 body {
-  font-family: "Kavoon";
+  font-family: "Kavoon", sans-serif;
   background-color: #f4f4f4;
   margin: 0;
 }
 
 .section-header {
-  font-size: 70px;
+  font-size: 4vw;
   color: #333;
   text-align: center;
   margin: 40px 0 20px;
+  font-family: "Kavoon", sans-serif;
 }
 
 .menu-section {
@@ -22,7 +23,8 @@ body {
   perspective: 1000px; 
   margin-bottom: 20px; 
   height: 550px; 
-  width: 550px;
+  width: 100%;
+  font-family: "Kavoon", sans-serif;
 }
 
 .card-price {
@@ -54,16 +56,23 @@ body {
   backface-visibility: hidden;
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-front {
   background-color: #fff; 
 }
 
+
+
 .card-front img {
-  margin-top: 50px;
-  width: 65%;
-  height: 55%;
+ width: 65%;
+  height: auto; 
+  display: block; 
+  margin: 50px auto 0 auto; 
 }
 
 .card-description {
@@ -89,20 +98,60 @@ body {
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1023px) {
   .menu-section {
-      grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
+  .section-header {
+    font-size: 6vw;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%; 
+  }
+
+  .card-front img {
+    width: 80%;
+  }
+
   .menu-section {
-      grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
   }
 }
 
+
+
 @media (max-width: 480px) {
+
+
+  .nav-links {
+    display: block;
+  }
+
+  .card-front, .card-back {
+    padding: 10px;
+    text-align: center;
+  }
+
   .menu-section {
-      grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; 
+    gap: 8px;
+  }
+
+  .card {
+    width: 95%; 
+  }
+
+  .card-description, .card-title {
+    font-size: 3vw; 
   }
 }
