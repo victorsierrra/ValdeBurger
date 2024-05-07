@@ -213,7 +213,7 @@ body {
 .container-ubicacion p{
   color: #2F2D2E;
   font-size: 20px;
-  height: 140px;
+  height: 125px;
 }
 .mapa-ubicacion iframe {
   width: 100%;
@@ -221,8 +221,8 @@ body {
 }
 .mapa-ubicacion{
   border: #2F2D2E solid 3px;
-  margin-top: 20px;
   height: 300px;
+  width: 600px;
   border-radius: 8px;
 }
 
@@ -238,11 +238,11 @@ body {
   color: #F14A41;
 }
 
-.primera-ubicacion, .segunda-ubicacion {
+.primera-ubicacion{
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   margin: 20px;
   padding: 30px;
