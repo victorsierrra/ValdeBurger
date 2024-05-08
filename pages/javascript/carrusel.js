@@ -10,14 +10,5 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}    
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 10000); // Cambia imagen cada 10 segundos
+    setTimeout(showSlides, 8000); // Cambia imagen cada 10 segundos
 }
-
-document.querySelector(".prev").addEventListener("click", function(){
-    slideIndex -= 2;
-    showSlides();
-});
-
-document.querySelector(".next").addEventListener("click", function(){
-    showSlides();
-});
