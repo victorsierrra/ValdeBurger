@@ -19,6 +19,31 @@ body {
   justify-content: center;
 }
 
+.card-title-container {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.title-allergy-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-alergias {
+  max-width: 4%;
+  margin-right: 8px;
+  margin-left: 5px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+ 
+}
 .card {
   perspective: 1000px; 
   margin-bottom: 20px; 
@@ -69,11 +94,12 @@ body {
 
 
 .card-front img {
- width: 65%;
+ width: 55%;
   height: auto; 
   display: block; 
-  margin: 50px auto 0 auto; 
+  margin-top: 5px;
 }
+
 
 .card-description {
   margin-left: 15px;
