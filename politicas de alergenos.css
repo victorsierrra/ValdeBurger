@@ -5,14 +5,9 @@ body {
     background-color: #f8f8f8;
 }
 
-img {
-    max-width: 2.5%;
-    margin-right: 8px;
-}
-
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #f8f8f8;
+    color: #f14a41;
     padding: 20px 0;
     text-align: center;
 }
@@ -21,20 +16,52 @@ header {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    text-align: left;
 }
 
 ol {
     margin-left: 20px;
+    padding-left: 0;
 }
 
 ol li {
     margin-bottom: 10px;
+    list-style-position: inside;
+    display: flex;
+    align-items: center;
+}
+
+ol li img {
+    max-width: 4%;
+    margin-right: 8px;
 }
 
 
-@media only screen and (max-width: 425px) {
-    img{
-        max-width: 4.5%;
+/* Media queries para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+
+    ol li img {
+        max-width: 6%;
     }
-   
+
+    .container {
+        padding: 15px;
+    }
+
+
+
+@media only screen and (max-width: 425px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    ol li img {
+        max-width: 8%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+}
 }

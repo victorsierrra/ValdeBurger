@@ -1,8 +1,12 @@
+
+
 body {
     font-family: "Kavoon", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
+    overflow-x: hidden; /* Impedir desbordamiento horizontal */
+    max-width: 100%;
 }
 
 header {
@@ -10,18 +14,60 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
 .container {
     max-width: 800px;
+    width: 100%; /* Asegurar que el contenedor siempre ocupe el ancho completo */
     margin: 0 auto;
     padding: 20px;
+    text-align: left;
 }
 
 h2 {
     margin-top: 20px;
+    font-size: 1.8em;
+    text-align: center;
 }
 
 p {
     margin-bottom: 15px;
+    font-size: 1em;
+    text-align: justify;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 95%; /* Usa casi todo el ancho disponible */
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .container {
+        max-width: 90%; /* Mayor uso del ancho en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
 }
