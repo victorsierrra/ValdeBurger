@@ -6,15 +6,37 @@
         <meta name = "description" content="Pagina web ValdeBurger"/>
         <meta name = "author" content="Victor_Sierra-Daniel-Aguaron"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="../css/cookies.css">
         <link rel="stylesheet" href="../css/home.css">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="../../imagenes/Logo-ValdeBurger.png">
+        <link rel="icon" type="image/x-icon" href="../../imagenes/Logo-ValdeBurger (2).png">
         <script src="../javascript/nav-desplegable.js"></script>
+        <script src="../javascript/cookies.js"></script>
         <title>Home</title>
     </head>
     <body>
+
+      <div id="cookieConsentPopup" class="cookie-consent-popup">
+        <div class="cookie-header">
+          <img src="../../imagenes/cookie.webp" alt="Icono de Cookie" class="cookie-icon">
+          <h2>Política de Cookies</h2>
+        </div>
+        <p>Utilizamos cookies para asegurar que te damos la mejor experiencia en nuestra página de hamburguesas.</p>
+        <button id="btn-detalle" onclick="toggleCookieDetails()" id="btn-detalle">Ver más</button>
+        <div id="cookieDetails" style="display:none;">
+          <p><strong>Cookies necesarias:</strong> Estas cookies son esenciales para el funcionamiento de la página web.</p>
+          <p><strong>Cookies de análisis:</strong> Nos permiten analizar cómo interactúan los usuarios con la página, mejorando así nuestro servicio.</p>
+        </div>
+        <div class="buttons">
+          <button onclick="acceptCookies()">Aceptar</button>
+          <button onclick="rejectCookies()">Rechazar</button>
+        </div>
+      </div>
+      
+
         <nav class="navbar">
             <div class="logo">
               <a href="./home.html"><img src="../../imagenes/Logo-ValdeBurger.png"></a>
@@ -24,8 +46,8 @@
                 <li><a href="#"><img src="../../imagenes/Bandera_de_España.png" ></a></li>
                 <li><a href="./home.html"><span class ="pagina-actual">INICIO</span></a></li>
                 <li><a href="./sobrenosotros.html">SOBRE NOSOTROS</a></li>
-                <li><a href="#">CARTA</a></li>
-                <li><a href="#">CONTACTO</a></li>
+                <li><a href="./carta.html">CARTA</a></li>
+                <li><a href="#">CONTACT US</a></li>
                 <li><a href="#">¡PIDE YA!</a></li>
                 <li> <span class="icono-usuario"><a href="./login.html"><svg
                   xmlns="http://www.w3.org/2000/svg"
