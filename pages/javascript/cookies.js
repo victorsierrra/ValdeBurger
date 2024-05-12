@@ -9,7 +9,7 @@ function acceptCookies() {
     var popup = document.getElementById('cookieConsentPopup');
     popup.style.display = 'none';
     // Muestra un mensaje de advertencia al usuario
-    alert('Cookies no aceptadas. Podría afectar la experiencia en la página.');
+    alert('Cookies decline. Could affect the experience on the site.');
   }
   
   window.onload = function() {
@@ -21,12 +21,12 @@ function acceptCookies() {
     var boton = document.getElementById('btn-detalle');
     var details = document.getElementById('cookieDetails');
     if (details.style.display === 'none') {
-        boton.innerText = 'Ver menos';
+        boton.innerText = 'Less information';
       details.style.display = 'block';
       
     } else {
       details.style.display = 'none';
-      boton.innerText = 'Ver más'
+      boton.innerText = 'More information'
     }
   }
     
