@@ -9,9 +9,7 @@ body {
   .pagina-actual:hover{
     color:#FDFFFC ;
   }
-  .nav-links li img{
-    height: 20px;
-  }
+
   .navbar {
     font-family: "Kavoon", sans-serif;
     display: flex;

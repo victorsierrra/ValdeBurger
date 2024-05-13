@@ -11,9 +11,7 @@
   .pagina-actual:hover{
     color:#FDFFFC ;
   }
-  .nav-links li img{
-    height: 20px;
-  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
