@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name = "description" content="Pagina web ValdeBurger"/>
+        <meta name = "author" content="Victor_Sierra-Daniel-Aguaron"/>
+        <link rel="stylesheet" href="loginprivate.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../../imagenes/Logo-ValdeBurger (2).png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Login-Private</title>
+    </head>
+    <body>
+    <div class="login-container">
+        <div class="logo">
+            <a href="./home.html"><img src="../../imagenes/Logo-ValdeBurger.png"></a>
+        </div>
+        <h2>Login to Your Account</h2>
+        <form action="/submit-your-login-form" method="POST">
+            <div class="input-group">
+                <label for="username">Email</label>
+                <input type="text" id="Email" name="Email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
