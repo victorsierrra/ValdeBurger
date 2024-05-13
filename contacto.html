@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name = "description" content="Pagina web ValdeBurger"/>
+        <meta name = "author" content="Victor_Sierra-Daniel-Aguaron"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="contacto.css">
+        <link rel="stylesheet" href="footer.css">
+        <script src="form.js" defer></script>
+        <script src="nav-desplegable.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+        <title>Contact Us</title>
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <div class="logo">
+              <a href="./home.html"><img src="../../imagenes/Logo-ValdeBurger.png"></a>
+            </div>
+            <div class="nav-enlaces">
+              <ul class="nav-links">
+                <li><a href="./home.html">INICIO</a></li>
+                <li><a href="./sobrenosotros.html"><span class ="pagina-actual">SOBRE NOSOTROS</span></a></li>
+                <li><a href="#">CARTA</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#">¡PIDE YA!</a></li>
+                <li> <span class="icono-usuario"><a href="./login.html"><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+              </svg></a></span></li>
+              <li><span class="icono-carrito"><a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.6 13.34a1 1 0 0 0 1 .66h11.72a1 1 0 0 0 .98-.78l3.1-10H6.42"></path>
+                  </svg>
+              </a></span></li>
+              </ul>
+            </div>
+            <div class="nav-movil">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </div>         
+          </nav>
+
+        <header class="header">
+            <h1>Contáctanos</h1>
+        </header>
+        
+       
+
+        <div class="container">
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <p><h3>Dirección:</h3> C. de Violeta Parra, 9, 50015 Zaragoza</p>
+                <p><h3>Teléfono:</h3> +1 234 567 8900</p>
+                <p><h3>Correo Electrónico:</h3> valdeburgersl@gmail.com</p>
+                <p><h3>Horario:</h3> Lunes a Viernes: 11:00am - 12:00pm</p>
+                <p>Sábados y Domingos: 12:00am - 11:00pm</p>
+                <p>Además nos podréis contactar a través de nuestras redes sociales:</p>
+                <a href="https://www.tiktok.com/@valdeburger"><img src="./imagenes/tiktok.png" alt="TikTok"></a>
+                <a href="https://twitter.com/VALDEBURGER"><img src="./imagenes/x.avif" alt="X"></a>
+                <a href="https://www.instagram.com/valdeburger"><img src="./imagenes/instagram.png" alt="Instagram"></a>
+            </div>
+        
+            <div class="content">
+                <div class="contact-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <form id="contactForm">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+            
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+            
+                        <button type="submit">Enviar</button>
+                        <div id="formResponse" style="margin-top: 20px;"></div>
+                    </form>
+            </div>
+            </div>
+        </div>
+        
+        </body>
+
+        <footer>
+            <div class="footer-content">
+              <div class="footer-section">
+                <h3>Alergías</h3>
+                <ul>
+                  <li><a href="informacion sobre alergias.html">Información sobre alergias</a></li>
+                  <li><a href="políticas de alérgenos.html">Política de alergenos</a></li>
+                  <li><a href="productos sin gluten.html">Productos sin gluten</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3>Contactanos</h3>
+                <ul>
+                  <li>Dirección: C. de Violeta Parra, 9, 50015 Zaragoza</li>
+                  <li>Teléfono: 693565360</li>
+                  <li>Correo electrónico: valdeburgersl@gmail.com</li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3>Horario de atención</h3>
+                <ul>
+                  <li>Nuestro equipo está disponible para atenderte en los siguientes horarios</li>
+                  <li>Lunes a Viernes: 11:00am - 12:00pm</li>
+                  <li>Sábados y Domingos: 12:00am - 11:00pm</li>
+                </ul>
+              </div>
+            </div>
+          
+          
+            <div class="footer-bottom">
+                <div class="social-media">
+                    <h3>Redes Sociales:</h3>
+                    <a href="https://www.tiktok.com/@valdeburger"><img src="./imagenes/tiktok.png" alt="TikTok"></a>
+                    <a href="https://twitter.com/VALDEBURGER"><img src="./imagenes/x.avif" alt="X"></a>
+                    <a href="https://www.instagram.com/valdeburger"><img src="./imagenes/instagram.png" alt="Instagram"></a>
+                  </div>
+              <p>© 2024 VALDEBURGER. Todos los derechos reservados.</p>
+            </div>
+          </footer>
+          
+
+        </html>

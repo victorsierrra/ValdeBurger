@@ -1,0 +1,147 @@
+.pagina-actual{
+    color:#F14A41 ;
+  }
+  .pagina-actual:hover{
+    color:#FDFFFC ;
+  }
+  .nav-links li img{
+    height: 20px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F2D2E;
+    color: #FDFFFC;
+    padding: 20px;
+  }
+  
+  .navbar .logo img {
+    height: 80px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+  }
+  
+  .nav-links li {
+    margin-right: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #FDFFFC;
+  }
+  
+  .nav-links li a:hover, .icono-usuario a:hover {
+    color: #F14A41;
+  }
+  .nav-movil{
+    display: none;
+    cursor: pointer;
+  }
+     
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #2F2D2E;
+      z-index: 333;
+  }
+  .navbar{
+    padding: 5px;
+  }
+  
+  .nav-links.active {
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin: 20px 0;
+      text-align: center;
+  }
+  
+  .nav-links li a {
+      font-size: 24px;
+  }
+  
+  .nav-movil {
+      display: flex;
+      cursor: pointer;
+      z-index: 1000;
+  }
+  }
+  
+  @media (max-width: 1440px) {
+    .footer-content {
+      max-width: 1000px;
+    }
+  }
+  
+  /* Responsive: 1024px */
+  @media (max-width: 1024px) {
+    .footer-content {
+      max-width: 900px;
+    }
+  
+    .footer-section {
+      min-width: 180px;
+    }
+  }
+  
+  /* Responsive: 768px */
+  @media (max-width: 768px) {
+    .footer-content {
+      max-width: 700px;
+    }
+  
+    .footer-section {
+      min-width: 150px;
+    }
+  }
+  
+  @media (max-width: 426px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 0 15px;
+    }
+  
+    .footer-section:nth-of-type(1) {
+      order: 2;
+  
+    .footer-section:nth-of-type(2) {
+      order: 1; 
+    }
+  
+    .footer-section:nth-of-type(3) {
+      order: 3; 
+    }
+  
+    .footer-section {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .social-media {
+      justify-content: flex-start;
+      margin-bottom: 15px;
+    }
+  
+    .social-media img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  }
