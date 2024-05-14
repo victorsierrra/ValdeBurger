@@ -1,0 +1,112 @@
+.pagina-actual{
+    color:#F14A41 ;
+  }
+  .pagina-actual:hover{
+    color:#FDFFFC ;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F2D2E;
+    color: #FDFFFC;
+    padding: 20px;
+    top: 0;
+  }
+  
+  .navbar .logo img {
+    height: 80px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+  }
+  
+  .nav-links li {
+    margin-right: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #FDFFFC;
+  }
+  
+  .nav-links li a:hover, .icono-usuario a:hover {
+    color: #F14A41;
+  }
+
+
+
+ .container {
+    font-family: "Kavoon", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+#cartTotal {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+#backButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#backButton:hover {
+    background-color: #c0392b;
+}

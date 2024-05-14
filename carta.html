@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="carta.css">
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="cookies.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <title>Menú Completo</title>
 </head>
 <body>
@@ -67,7 +68,7 @@
         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
         <circle cx="12" cy="7" r="4"></circle>
     </svg></a></span></li>
-    <li><span class="icono-carrito"><a href="#">
+    <li><span class="icono-carrito"><a href="./cart.html">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -112,6 +113,7 @@
         <div class="card-description">Alitas de pollo tiernas, marinadas en una exquisita mezcla de garam masala que resalta sus sabores vibrantes, cocidas cuidadosamente a baja temperatura para asegurar su jugosidad. 
           Estas alitas son generosamente bañadas en nuestra salsa BBQ casera, rica y ligeramente ahumada, y finalmente espolvoreadas con crujientes kikos y cebollino fresco picado para añadir un toque fresco y texturizado. 
           Perfectas para deleitar el paladar con un balance único de sabores y texturas.</div>
+          <button class="add-to-cart-button" onclick="addToCart('CHODITAS', 8.90)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -137,6 +139,7 @@
         <div class="card-description">Deliciosas french fries de patata agria, delicadamente infusionadas con el sabor único de la trufa negra y realzadas con un toque de queso parmesano recién rallado. 
           Una combinación de sabores irresistibles que te transportará a la exquisitez de la alta cocina. Acompañadas de nuestra salsa especial de trufa y presentadas con un toque de frescura gracias a las hierbas aromáticas. 
           Una experiencia gourmet que no querrás perderte.</div>
+          <button class="add-to-cart-button" onclick="addToCart('PATATAS GITANAS', 5.90)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -162,6 +165,7 @@
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">"¡Bacon crujiente y queso derretido: la pareja perfecta para tus patatas favoritas!"
          </div>
+         <button class="add-to-cart-button" onclick="addToCart('PATATAS GUAJIRO', 5.90)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -187,6 +191,7 @@
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">"¡Los nachos de tus sueños están aquí! Deliciosos totopos caseros cubiertos con suculento pulled pork, cremoso guacamole, crujiente bacon, queso derretido y nuestra salsa especial. 
           Una explosión de sabores que te transportará al paraíso de la cocina tex-mex. ¡Prepárate para una experiencia inolvidable en cada bocado!"</div>
+          <button class="add-to-cart-button" onclick="addToCart('NACHOS MORANOS', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -213,6 +218,7 @@
         <div class="card-description">"Sumérgete en una experiencia culinaria única con nuestras croquetas de pulled pork. 
           Cada bocado es una aventura gastronómica que combina la suavidad y el sabor del pulled pork con la textura crujiente de nuestra capa de panco dorada y delicada. El relleno jugoso y sabroso se mezcla armoniosamente con la perfecta combinación de ingredientes seleccionados cuidadosamente. Déjate seducir por la fusión de sabores y la calidad de nuestros ingredientes, que te transportarán a un viaje de placer culinario. 
           Un verdadero deleite para los sentidos que no querrás perderte."</div>
+          <button class="add-to-cart-button" onclick="addToCart('CROQUETAS DE DOÑA GODINA', 9.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -238,6 +244,7 @@
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">"Descubre el encanto clásico de nuestra Ensalada César, donde la frescura de las crujientes hojas de lechuga se fusiona con la cremosidad del aderezo casero, realzada con la textura crujiente de los crotones de pan tostado. Completa este festín de sabores con la generosa lluvia de queso parmesano rallado y el toque final de las tiras de pollo a la parrilla. 
           Una experiencia gastronómica que celebra la simplicidad y la exquisitez de los ingredientes frescos y de calidad."</div>
+          <button class="add-to-cart-button" onclick="addToCart('ENSALADA LA PISTA', 8.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -267,6 +274,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">2 x 100 gr. de carne smasheada, doble queso cheddar, cebolla troceada, relish de pepinillos, mostaza y ketchup.</div>
+        <button class="add-to-cart-button" onclick="addToCart('VALDEBURGER', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -289,6 +297,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">2 x 100 gr. de carne smasheada con cebolla, al puro estilo oklahoma, queso edam y salsa de la casa</div>
+        <button class="add-to-cart-button" onclick="addToCart('PARANOIAS BURGER', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -310,6 +319,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">2 x 100gr. de carne smasheada, queso cheddar, lechuga en tiras, cebolla troceada, pepino y salsa mcfly.</div>
+        <button class="add-to-cart-button" onclick="addToCart('BIG MORAD', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -333,6 +343,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">200 gr. de pollo frito artesano, queso edam, lechuga fresca y salsa chikin</div>
+        <button class="add-to-cart-button" onclick="addToCart('LA ALBARCUDA', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -353,6 +364,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">2 x 100 gr. de carne smasheada, cebolla caramelizada, bacon crujiente, queso cheddar, pepinillos y salsa rocky.</div>
+        <button class="add-to-cart-button" onclick="addToCart('LA MULARROYA', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -374,6 +386,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">Doble smash burger de carne de vaca, cheddar, queso crema y cebolla caramelizada.</div>
+        <button class="add-to-cart-button" onclick="addToCart('LA SANTA', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -405,6 +418,7 @@
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">"Queso Payoyo cuidadosamente seleccionado, una pizca de dulzura, y una base de galleta crujiente: la receta perfecta para nuestra tentadora Tarta de Queso Payoyo."
         </div>
+        <button class="add-to-cart-button" onclick="addToCart('TARTA DE QUESO', 6.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -428,6 +442,7 @@
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">
           "Piña, mango, maracuyá y agua de coco: ¡la mezcla perfecta para refrescar tus sentidos en nuestro batido Agua del Jalón!"</div>
+          <button class="add-to-cart-button" onclick="addToCart('AGUA DE JALON', 6.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -450,13 +465,11 @@
         <div class="card-title">INGREDIENTES:</div>
         <div class="card-description">"Elaborado con una mezcla exquisita de leche fresca, nata de la mejor calidad y un toque de vainilla natural, 
           nuestro Gelato de la Sierra te transporta a un mundo de sabor único y refrescante, que te hará disfrutar de cada momento."</div>
+          <button class="add-to-cart-button" onclick="addToCart('GELATTO DE LA SIERRA', 6.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
 </div>
-
-
-
 
 <div class="section-header">Bebidas</div>
 <div class="menu-section">
@@ -479,6 +492,7 @@
         <img src="./imagenes/CocaCola.jpg" alt="Bebidas 2">
         <div class="card-title">Coca-Cola</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('AGUA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -490,6 +504,7 @@
         <img src="./imagenes/cocacola zero.png" alt="Bebidas 3">
         <div class="card-title">Coca-Cola Zero</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('Coca-Cola Zero', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -501,6 +516,7 @@
         <img src="./imagenes/NESTEA.jpg" alt="Bebidas 4">
         <div class="card-title">NESTEA</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('NESTEA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -512,6 +528,7 @@
         <img src="./imagenes/AQUARIUS-LIMON.webp" alt="Bebidas 5">
         <div class="card-title">AQUARIUS LIMON</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('AQUARIUS LIMON', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -523,6 +540,7 @@
         <img src="./imagenes/aquarius-naranja.jpg" alt="Bebidas 6">
         <div class="card-title"> AQUARIUS NARANJA</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('AQUARIUS NARANJA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -539,6 +557,7 @@
           </div>
         </div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('CERVEZA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -555,6 +574,7 @@
           </div>
         </div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('CERVEZA SIN ALCOHOL', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -566,11 +586,15 @@
         <img src="./imagenes/7 UP.png" alt="Bebidas 9">
         <div class="card-title"> 7 UP</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('7 UP', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
 
 </div>
+
+<script src="anadiralcarrito.js"></script>
+
 </body>
 
 <footer>

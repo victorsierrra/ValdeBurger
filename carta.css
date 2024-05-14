@@ -124,6 +124,30 @@ body {
   text-align: center;
 }
 
+#cartTotal {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.add-to-cart-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #c0392b;
+}
+
+.swal2-confirm {
+  font-weight: bold !important;
+}
+
 @media (max-width: 1023px) {
   .menu-section {
     grid-template-columns: repeat(2, 1fr); 
