@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="../css/carta.css">
 <link rel="stylesheet" href="../css/cookies.css">
 <script src="../javascript/nav-desplegable.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <title>Complete Menu</title>
 </head>
 <body>
@@ -90,6 +91,7 @@
         <div class="card-description">Tender chicken wings, marinated in an exquisite garam masala blend that brings out their vibrant flavours, carefully cooked at a low temperature to ensure juiciness. 
           These wings are generously dipped in our rich, lightly smoky homemade BBQ sauce, and finally sprinkled with crunchy kikos and freshly chopped chives for a fresh, textured touch. 
           Perfect for delighting the palate with a unique balance of flavours and textures..</div>
+          <button class="add-to-cart-button" onclick="addToCart('CHODITAS', 8.90)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -115,6 +117,7 @@
         <div class="card-description">Delicious sour potato fries, delicately infused with the unique flavour of black truffle and enhanced with a touch of freshly grated Parmesan cheese. 
           An irresistible combination of flavours that will transport you to the exquisiteness of haute cuisine. Accompanied by our special truffle sauce and presented with a touch of freshness thanks to the aromatic herbs. 
           A gourmet experience you won't want to miss..</div>
+          <button class="add-to-cart-button" onclick="addToCart('PATATAS GITANAS', 5.90)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -139,6 +142,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">"Crispy bacon and melted cheese: the perfect match for your favourite chips!"
+          <button class="add-to-cart-button" onclick="addToCart('PATATAS GUAJIRO', 5.90)">Añadir al Carrito</button>
          </div>
       </div>
     </div>
@@ -165,6 +169,7 @@
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">"The nachos of your dreams are here! Delicious homemade tortilla chips topped with succulent pulled pork, creamy guacamole, crispy bacon, melted cheese and our special sauce. 
           An explosion of flavours that will transport you to Tex-Mex heaven - get ready for an unforgettable experience in every bite!"</div>
+          <button class="add-to-cart-button" onclick="addToCart('NACHOS MORANOS', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -191,6 +196,7 @@
         <div class="card-description">"Immerse yourself in a unique culinary experience with our pulled pork croquettes. 
           Every bite is a gastronomic adventure that combines the softness and flavour of pulled pork with the crunchy texture of our delicate, golden brown bacon coating. The juicy and flavourful filling blends harmoniously with the perfect combination of carefully selected ingredients. Let yourself be seduced by the fusion of flavours and the quality of our ingredients, which will take you on a journey of culinary pleasure. 
           A true delight for the senses that you won't want to miss."</div>
+          <button class="add-to-cart-button" onclick="addToCart('CROQUETAS DE DOÑA GODINA', 9.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -216,6 +222,7 @@
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">"Discover the classic charm of our Caesar Salad, where the freshness of crisp lettuce leaves fuses with the creaminess of homemade dressing, enhanced by the crunchy texture of toasted bread croutons. Complete this feast of flavours with the generous sprinkling of grated Parmesan cheese and the finishing touch of grilled chicken strips. 
           A dining experience that celebrates the simplicity and exquisiteness of fresh, quality ingredients."</div>
+          <button class="add-to-cart-button" onclick="addToCart('ENSALADA LA PISTA', 8.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -243,8 +250,9 @@
       </div>
      
       <div class="card-back">
-        <div class="card-title">INGREDIENTES:</div>
+        <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">2 x 100 grams of shredded beef, double cheddar cheese, chopped onion, pickle relish, mustard and ketchup.</div>
+        <button class="add-to-cart-button" onclick="addToCart('VALDEBURGER', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -265,8 +273,9 @@
       </div>
       
       <div class="card-back">
-        <div class="card-title">INGREDIENTES:</div>
+        <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">2 x 100 gr. of beef smasheada with onion, oklahoma style, edam cheese and house sauce</div>
+        <button class="add-to-cart-button" onclick="addToCart('PARANOIAS BURGER', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -286,8 +295,9 @@
       </div>
       
       <div class="card-back">
-        <div class="card-title">INGREDIENTES:</div>
+        <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">2 x 100gr. of shredded beef, cheddar cheese, shredded lettuce, chopped onion, cucumber and mcfly sauce.</div>
+        <button class="add-to-cart-button" onclick="addToCart('BIG MORAD', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -311,6 +321,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">200 gr. artisan fried chicken, edam cheese, fresh lettuce and chikin sauce</div>
+        <button class="add-to-cart-button" onclick="addToCart('LA ALBARCUDA', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -331,6 +342,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">2 x 100 grams of shredded beef, caramelised onion, crispy bacon, cheddar cheese, pickles and rocky sauce.</div>
+        <button class="add-to-cart-button" onclick="addToCart('LA MULARROYA', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -352,6 +364,7 @@
       <div class="card-back">
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">Double smash burger with beef, cheddar, cream cheese and caramelised onions.</div>
+        <button class="add-to-cart-button" onclick="addToCart('LA SANTA', 12.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -383,6 +396,7 @@
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">"Carefully selected Payoyo cheese, a hint of sweetness, and a crunchy biscuit base: the perfect recipe for our tempting Payoyo Cheesecake".
         </div>
+        <button class="add-to-cart-button" onclick="addToCart('TARTA DE QUESO', 6.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -406,6 +420,7 @@
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">
           "Pineapple, mango, passion fruit and coconut water: the perfect blend to refresh your senses in our Agua del Jalón smoothie!"</div>
+          <button class="add-to-cart-button" onclick="addToCart('AGUA DE JALON', 6.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -428,6 +443,7 @@
         <div class="card-title">INGREDIENTS:</div>
         <div class="card-description">"Made with an exquisite blend of fresh milk, cream of the highest quality and a touch of natural vanilla, 
           our Gelato de la Sierra transports you to a world of unique and refreshing flavours that will make you enjoy every moment".</div>
+          <button class="add-to-cart-button" onclick="addToCart('GELATTO DE LA SIERRA', 6.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -446,6 +462,7 @@
         <img src="../../imagenes/AGUA.jpg" alt="Bebidas 1">
         <div class="card-title">WATER</div>
         <div class="card-price">2.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('AGUA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -457,6 +474,7 @@
         <img src="../../imagenes/CocaCola.jpg" alt="Bebidas 2">
         <div class="card-title">Coca-Cola</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('AGUA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -468,6 +486,7 @@
         <img src="../../imagenes/cocacola zero.png" alt="Bebidas 3">
         <div class="card-title">Coca-Cola Zero</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('Coca-Cola Zero', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -479,6 +498,7 @@
         <img src="../../imagenes/NESTEA.jpg" alt="Bebidas 4">
         <div class="card-title">NESTEA</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('NESTEA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -490,6 +510,7 @@
         <img src="../../imagenes/AQUARIUS-LIMON.webp" alt="Bebidas 5">
         <div class="card-title">AQUARIUS LIMON</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('AQUARIUS LIMON', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -501,6 +522,7 @@
         <img src="../../imagenes/aquarius-naranja.jpg" alt="Bebidas 6">
         <div class="card-title"> AQUARIUS NARANJA</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('AQUARIUS NARANJA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -517,6 +539,7 @@
           </div>
         </div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('CERVEZA', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -533,6 +556,7 @@
           </div>
         </div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('CERVEZA SIN ALCOHOL', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
@@ -544,6 +568,7 @@
         <img src="../../imagenes/7 UP.png" alt="Bebidas 9">
         <div class="card-title"> 7 UP</div>
         <div class="card-price">3.50$</div>
+        <button class="add-to-cart-button" onclick="addToCart('7 UP', 3.50)">Añadir al Carrito</button>
       </div>
     </div>
   </div>
