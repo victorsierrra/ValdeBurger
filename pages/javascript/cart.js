@@ -12,8 +12,8 @@ function loadCart() {
             <td>${item.quantity}</td>
             <td>$${(item.price * item.quantity).toFixed(2)}</td>
             <td>
-                <button onclick="removeFromCart('${item.product}')">Quitar</button>
-                <button onclick="addToCart('${item.product}', ${item.price})">Añadir</button>
+                <button onclick="removeFromCart('${item.product}')">Remove</button>
+                <button onclick="addToCart('${item.product}', ${item.price})">Add</button>
             </td>
         `;
         cartTableBody.appendChild(row);

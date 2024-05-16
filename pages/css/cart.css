@@ -1,44 +1,86 @@
 .pagina-actual{
-    color:#F14A41 ;
-  }
-  .pagina-actual:hover{
-    color:#FDFFFC ;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2F2D2E;
-    color: #FDFFFC;
-    padding: 20px;
-    top: 0;
-  }
-  
-  .navbar .logo img {
-    height: 80px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    margin-right: 50px;
-  }
-  
-  .nav-links li {
-    margin-right: 30px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #FDFFFC;
-  }
-  
-  .nav-links li a:hover, .icono-usuario a:hover {
-    color: #F14A41;
-  }
+  color:#F14A41 ;
+}
+.pagina-actual:hover{
+  color:#FDFFFC ;
+}
 
+.navbar {
+  font-family: "Kavoon", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2F2D2E;
+  color: #FDFFFC;
+  padding: 20px;
+}
+
+.navbar .logo img {
+  height: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 50px;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #FDFFFC;
+}
+
+.nav-links li a:hover, .icono-usuario a:hover {
+  color: #F14A41;
+}
+.nav-movil{
+  display: none;
+  cursor: pointer;
+}
+   
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2F2D2E;
+    z-index: 333;
+}
+.navbar{
+  padding: 5px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.nav-links li a {
+    font-size: 24px;
+}
+
+.nav-movil {
+    display: flex;
+    cursor: pointer;
+    z-index: 1000;
+}
+}
 
 
  .container {
@@ -85,6 +127,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "Kavoon", sans-serif;
 }
 
 button:hover {
@@ -105,6 +148,7 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "Kavoon", sans-serif;
 }
 
 #backButton:hover {
