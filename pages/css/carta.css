@@ -44,6 +44,8 @@ body {
   .nav-links li a:hover, .icono-usuario a:hover {
     color: #F14A41;
   }
+
+  
   .nav-movil{
     display: none;
     cursor: pointer;
