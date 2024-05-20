@@ -134,39 +134,6 @@ body {
     width: 100%;
     height: auto;
 }
-
-.contact-form h3{
-    color:#FDFFFC;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    color:#FDFFFC;
-}
-.contact-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-.contact-form input, .contact-form textarea {
-    margin-bottom: 15px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.contact-form button {
-    padding: 10px 20px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.contact-form button:hover {
-    background-color: #ffc515;
-}
-
 footer {
     background-color: #000;
     color: #fff;
