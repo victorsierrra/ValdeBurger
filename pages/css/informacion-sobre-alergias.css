@@ -92,8 +92,8 @@ body {
   }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #f8f8f8;
+    color: #f14a41;
     padding: 20px 0;
     text-align: center;
     width: 100%; /* Ocupa todo el ancho disponible */
