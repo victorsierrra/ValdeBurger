@@ -1,3 +1,7 @@
+*{
+  margin:0px;
+}
+
 .pagina-actual{
   color:#F14A41 ;
 }
@@ -85,13 +89,13 @@
 
  .container {
     font-family: "Kavoon", sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffc515;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 800px;
 }
 
 h1 {
