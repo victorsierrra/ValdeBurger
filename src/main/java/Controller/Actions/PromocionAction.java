@@ -50,6 +50,7 @@ public class PromocionAction implements IAction {
         } else {
             return "ID no proporcionado.";
         }
+
     }
     private String add(HttpServletRequest request) {
         String idPromocion = request.getParameter("ID_PROMOCION");
