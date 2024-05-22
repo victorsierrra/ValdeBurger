@@ -6,10 +6,25 @@ import java.util.ArrayList;
 public class CategoriaDao implements IDao {
     private static final String SQL_FIND_ALL = "SELECT * FROM CATEGORIA WHERE 1=1 ";
     private final String SQL_DELETE = "DELETE FROM CATEGORIA WHERE ID_CATEGORIA='";
+    private final String SQL_ADD = "INSERT INTO CATEGORIA (ID_CATEGORIA, NOMBRE) VALUES (";
+    private static final String SQL_UPDATE = "UPDATE CATEGORIA SET ";
 
     @Override
     public int add(Object bean) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        MotorSQL motorSQL = new MotorSQL();
+        motorSQL.connect();
+        String sql = SQL_ADD;
+        Categoria categoria = (Categoria) bean;
+        sql += "'" + categoria.getIdCategoria() + "'";
+        sql += ", ";
+        sql += "'" + categoria.getNombreCategoria() + "'";
+        sql += ")";
+        System.out.println(sql);  // Para depuración
+
+        int filasModificadas = motorSQL.execute(sql);
+        motorSQL.disconnect();
+
+        return filasModificadas;
     }
 
     @Override
@@ -44,7 +59,18 @@ public class CategoriaDao implements IDao {
 
     @Override
     public int update(Object bean) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        MotorSQL motorSQL = new MotorSQL();
+        motorSQL.connect();
+        Categoria categoria = (Categoria) bean;
+        String sql = SQL_UPDATE +
+                "NOMBRE = '" + categoria.getNombreCategoria() +
+                "' WHERE ID_CATEGORIA = '" + categoria.getIdCategoria() + "'";
+        System.out.println(sql);
+
+        int filasModificadas = motorSQL.execute(sql);
+        motorSQL.disconnect();
+
+        return filasModificadas;
     }
 
     @Override

@@ -53,7 +53,6 @@ public class PromocionAction implements IAction {
         } else {
             return "ID no proporcionado.";
         }
-
     }
     private String update(HttpServletRequest request){
         String idPromocion = request.getParameter("ID_PROMOCION");
@@ -84,7 +83,6 @@ public class PromocionAction implements IAction {
         } else {
             return "Todos los campos son obligatorios.";
         }
-
     }
 
     private String add(HttpServletRequest request) {

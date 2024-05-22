@@ -2,6 +2,8 @@ package Controller.Actions;
 
 import Model.Categoria;
 import Model.CategoriaDao;
+import Model.Promocion;
+import Model.PromocionDao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,10 +24,67 @@ public class CategoriaAction implements IAction {
             case "DELETE":
                 strReturn = delete(request);
                 break;
+            case "ADD":
+                strReturn = add(request);
+                break;
+            case "UPDATE":
+                strReturn = update(request);
+                break;
             default:
                 strReturn = "ERROR. Invalid Action";
         }
         return strReturn;
+    }
+    private String update(HttpServletRequest request){
+        String idCategoria = request.getParameter("ID_CATEGORIA");
+        String nombreCategoria = request.getParameter("NOMBRE");
+
+        if (idCategoria != null && !idCategoria.isEmpty() && nombreCategoria != null && !nombreCategoria.isEmpty()) {
+            try {
+
+                Categoria categoria = new Categoria();
+                categoria.setIdCategoria(idCategoria);
+                categoria.setNombreCategoria(nombreCategoria);
+
+                CategoriaDao categoriaDao = new CategoriaDao();
+                int result = categoriaDao.update(categoria);
+                if (result > 0) {
+                    return "Actualiazado con éxito.";
+                } else {
+                    return "No se pudo actualizar.";
+                }
+            } catch (NumberFormatException e) {
+                return "ID o descuento no válidos.";
+            }
+        } else {
+            return "Todos los campos son obligatorios.";
+        }
+    }
+    private String add(HttpServletRequest request) {
+        String idCategoria = request.getParameter("ID_CATEGORIA");
+        String nombreCategoria = request.getParameter("NOMBRE");
+
+        if (idCategoria != null && !idCategoria.isEmpty() &&
+                nombreCategoria != null && !nombreCategoria.isEmpty()) {
+            try {
+
+                Categoria categoria = new Categoria();
+                categoria.setIdCategoria(idCategoria);
+                categoria.setNombreCategoria(nombreCategoria);
+
+                CategoriaDao categoriaDao = new CategoriaDao();
+                int result = categoriaDao.add(categoria);
+                if (result > 0) {
+                    return "Añadido con éxito.";
+                } else {
+                    return "No se pudo añadir.";
+                }
+            } catch (NumberFormatException e) {
+                return "ID o descuento no válidos.";
+            }
+        } else {
+            return "Todos los campos son obligatorios.";
+        }
     }
 
     private String findAll() {
@@ -34,7 +93,7 @@ public class CategoriaAction implements IAction {
         return Categoria.toArrayJSon(categorias);
     }
     private String delete(HttpServletRequest request) {
-        String id = request.getParameter("ID_Categoria");
+        String id = request.getParameter("ID_CATEGORIA");
         if (id != null && !id.isEmpty()) {
             CategoriaDao categoriaDao = new CategoriaDao();
             int result = categoriaDao.delete(id);
@@ -46,5 +105,6 @@ public class CategoriaAction implements IAction {
         } else {
             return "ID no proporcionado.";
         }
+
     }
 }

@@ -5,10 +5,26 @@ import java.util.ArrayList;
 
 public class DepartamentoDao implements IDao{
     private static final String SQL_FIND_ALL = "SELECT * FROM DEPARTAMENTOS WHERE 1=1 ";
+    private static final String SQL_UPDATE = "UPDATE DEPARTAMENTOS SET ";
+    private static final String SQL_ADD = "INSERT INTO DEPARTAMENTOS  (ID_DEPARTAMENTO, NOMBRE_DEPARTAMENTO) VALUES (";
+    private static final String SQL_DELETE = "DELETE FROM DEPARTAMENTOS WHERE ID_DEPARTAMENTO = '";
 
     @Override
     public int add(Object bean) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        MotorSQL motorSQL = new MotorSQL();
+        motorSQL.connect();
+        String sql = SQL_ADD;
+        Departamentos departamentos = (Departamentos) bean;
+        sql += "'" + departamentos.getIdDepartamento() + "'";
+        sql += ", ";
+        sql += "'" + departamentos.getNombreDepartamento() + "'";
+        sql += ")";
+        System.out.println(sql);
+
+        int filasModificadas = motorSQL.execute(sql);
+        motorSQL.disconnect();
+
+        return filasModificadas;
     }
 
     @Override
@@ -17,13 +33,44 @@ public class DepartamentoDao implements IDao{
     }
 
     @Override
-    public int delete(String bean) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public int delete(String id) {
+        int resp = 0;
+        MotorSQL motor = new MotorSQL();
+        motor.connect();
+        System.out.println(SQL_DELETE  + id + "'");
+        try {
+            // Asegurarse de que el ID está encerrado en comillas simples
+            String sql = SQL_DELETE  + id + "'";
+            motor.execute("SET FOREIGN_KEY_CHECKS=0;");
+            resp = motor.execute(sql);
+            motor.execute("SET FOREIGN_KEY_CHECKS=1;");
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            motor.disconnect();
+        }
+        if (resp == 0) {
+            System.out.println("Borrado con éxito.");
+        } else {
+            System.out.println("No se pudo borrar.");
+        }
+        return resp;
     }
 
     @Override
     public int update(Object bean) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        MotorSQL motorSQL = new MotorSQL();
+        motorSQL.connect();
+        Departamentos departamentos = (Departamentos) bean;
+        String sql = SQL_UPDATE +
+                "NOMBRE_DEPARTAMENTO = '" + departamentos.getNombreDepartamento() +
+                "' WHERE ID_DEPARTAMENTO = '" + departamentos.getIdDepartamento() + "'";
+        System.out.println(sql);
+
+        int filasModificadas = motorSQL.execute(sql);
+        motorSQL.disconnect();
+
+        return filasModificadas;
     }
 
     @Override
