@@ -26,6 +26,9 @@ public class PromocionAction implements IAction {
             case "ADD":
                 strReturn = add(request);
                 break;
+            case "UPDATE":
+                strReturn = update(request);
+                break;
             default:
                 strReturn = "ERROR. Invalid Action";
         }
@@ -52,6 +55,38 @@ public class PromocionAction implements IAction {
         }
 
     }
+    private String update(HttpServletRequest request){
+        String idPromocion = request.getParameter("ID_PROMOCION");
+        String nombrePromocion = request.getParameter("NOMBRE_PROMOCION");
+        String descuentoStr = request.getParameter("DESCUENTO");
+
+        if (idPromocion != null && !idPromocion.isEmpty() &&
+                nombrePromocion != null && !nombrePromocion.isEmpty() &&
+                descuentoStr != null && !descuentoStr.isEmpty()) {
+            try {
+                double descuento = Double.parseDouble(descuentoStr);
+
+                Promocion promocion = new Promocion();
+                promocion.setIdPromocion(idPromocion);
+                promocion.setNombrePromocion(nombrePromocion);
+                promocion.setDescuento(descuento);
+
+                PromocionDao promocionDao = new PromocionDao();
+                int result = promocionDao.update(promocion);
+                if (result > 0) {
+                    return "Actualiazado con éxito.";
+                } else {
+                    return "No se pudo actualizar.";
+                }
+            } catch (NumberFormatException e) {
+                return "ID o descuento no válidos.";
+            }
+        } else {
+            return "Todos los campos son obligatorios.";
+        }
+
+    }
+
     private String add(HttpServletRequest request) {
         String idPromocion = request.getParameter("ID_PROMOCION");
         String nombrePromocion = request.getParameter("NOMBRE_PROMOCION");

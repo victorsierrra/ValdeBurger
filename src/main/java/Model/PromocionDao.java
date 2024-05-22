@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class PromocionDao implements IDao {
     private static final String SQL_FIND_ALL = "SELECT * FROM PROMOCION WHERE 1=1 ";
+    private static final String SQL_UPDATE = "UPDATE PROMOCION SET ";
     private final String SQL_DELETE = "DELETE FROM PROMOCION WHERE ID_PROMOCION='";
     private final String SQL_ADD = "INSERT INTO PROMOCION (ID_PROMOCION, NOMBREPROMOCION, DESCUENTO) VALUES (";
     @Override
@@ -26,18 +27,76 @@ public class PromocionDao implements IDao {
 
         return filasModificadas;
     }
+    // SQL_UPDATE = "UPDATE PROMOCION SET "
+    @Override
+    public int update(Object bean) {
+        MotorSQL motorSQL = new MotorSQL();
+        motorSQL.connect();
+        Promocion promocion = (Promocion) bean;
+        String sql = SQL_UPDATE +
+                "NOMBREPROMOCION = '" + promocion.getNombrePromocion() + "', " +
+                "DESCUENTO = " + promocion.getDescuento() +
+                " WHERE ID_PROMOCION = '" + promocion.getIdPromocion() + "';";
+        System.out.println(sql);
+
+        int filasModificadas = motorSQL.execute(sql);
+        motorSQL.disconnect();
+
+        return filasModificadas;
+    }
 
     @Override
     public int delete(Integer e) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-
+/*
     @Override
     public int update(Object bean) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int resp = 0;
+        Promocion promocion = (Promocion) bean;
+        MotorSQL motorSQL = new MotorSQL();
+        String sql;
+        try {
+            motorSQL.connect();
 
-    }
+            if (bean == null) {
+                System.out.println("Introduzca datos a modificar");
+            } else {
+
+                sql = SQL_UPDATE;
+
+                /* sql += "'" + promocion.getIdPromocion() + "'";
+                sql += ",";
+                sql += "NOMBREPROMOCION '" + promocion.getNombrePromocion() + "'";
+                sql += ", DESCUENTO" + promocion.getDescuento();
+                sql += " WHERE ID_PROMOCION = '" + promocion.getIdPromocion() +"'";
+                sql += ";";
+                System.out.println(sql);*//*
+                    sql += "NOMBREPROMOCION='" + promocion.getNombrePromocion() + "',";
+
+
+                    sql += "DESCUENTO= " + promocion.getDescuento()+ "";
+
+                        sql += " WHERE ID_PROMOCION= '" + promocion.getIdPromocion() + "';";
+
+                    System.out.println(sql);
+                    resp = motorSQL.execute(sql);
+                }
+        }catch(Exception e) {
+            System.out.println("Error" + e.getMessage());
+            } finally{
+                motorSQL.disconnect();
+            }
+
+            if (resp > 0) {
+                System.out.println("Promocion actualizada con éxito.");
+            } else {
+                System.out.println("No se pudo actualizar.");
+            }
+            return resp;
+        }
+        */
     @Override
     public int delete(String id) {
         int resp = 0;
