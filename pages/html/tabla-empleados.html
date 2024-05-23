@@ -6,13 +6,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <script src="../javascript/tabla-empleados.js"></script>
     <link rel="stylesheet" href="../css/tabla-empleados.css">
     <title>Employee Data</title>
 </head>
 <body>
-    <button onclick="fetchEmployees();"></button>
+
 
 <h2 style="text-align: center;">Employee Data</h2>
+
+<button onclick="toggleEmployees()">See All</button>
 
 <table id="tabla-empleados">
     <thead>
@@ -34,6 +37,5 @@
     <tbody>
     </tbody>
 </table>
-<script src="../javascript/tabla-empleados.js"></script>
 </body>
 </html>
