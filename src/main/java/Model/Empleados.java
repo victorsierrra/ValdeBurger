@@ -4,12 +4,11 @@ import com.google.gson.GsonBuilder;
 import java.util.Date;
 import java.util.ArrayList;
 public class Empleados {
-    private String _nombre, _apellidos, _DNI, _correo, _contrasena, _idDepartamento, _idTrabajo;
+    private String _nombre, _apellidos, _DNI, _correo, _contrasena, _idDepartamento, _idTrabajo, _fechaNac, _fechaCont;
     private int _idEmpleado,_telefono, _salario;
-    private Date _fechaNac, _fechaCont;
     public Empleados(int pIdEmpleado, String pNombre, String pApellidos, int pTelefono,
                      String pCorreo, String pDNI, String pContrasena, int pSalario, String pTrabajo,
-                     String pDepartamentos, Date pFechaNac, Date pFechaCont){
+                     String pDepartamentos, String pFechaNac, String pFechaCont){
         this._idEmpleado=pIdEmpleado;
         this._nombre=pNombre;
         this._apellidos=pApellidos;
@@ -84,16 +83,16 @@ public class Empleados {
     public void setDepartamento(String value){
         this._idDepartamento=value;
     }
-    public Date getFechaNac(){
+    public String getFechaNac(){
         return _fechaNac;
     }
-    public void setFechaNac(Date value){
+    public void setFechaNac(String value){
         this._fechaNac=value;
     }
-    public Date getFechaCont(){
+    public String getFechaCont(){
         return _fechaCont;
     }
-    public void setFechaCont(Date value){
+    public void setFechaCont(String value){
         this._fechaCont=value;
     }
 

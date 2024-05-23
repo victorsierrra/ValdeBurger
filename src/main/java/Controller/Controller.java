@@ -57,6 +57,22 @@ public class Controller extends HttpServlet {
                 out.print(new PromocionAction().execute(request,response,arrayAction[1]));
                 break;
             }
+            case "PRODUCTO":
+            {
+                out.print(new ProductoAction().execute(request,response,arrayAction[1]));
+            }
+            case "CLIENTES":
+            {
+                out.print(new ClientesAction().execute(request,response,arrayAction[1]));
+            }
+            case "PEDIDOS":
+            {
+                out.print(new PedidosAction().execute(request,response,arrayAction[1]));
+            }
+            case "DETALLEPEDIDO":
+            {
+                out.print(new DetallePedidoAction().execute(request,response,arrayAction[1]));
+            }
             default:
             {
                 System.out.println(arrayAction[0]);
@@ -74,6 +90,7 @@ public class Controller extends HttpServlet {
             throws ServletException, IOException {
         processPostRequest(request, response);
     }
+
     private void processPostRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/plain;charset=UTF-8");
@@ -89,7 +106,7 @@ public class Controller extends HttpServlet {
        // System.out.println(gson.toJson(p));
 
         // response.getWriter().print("hola " + p.name + "\r\n");
-    }
+    }/*
     private static String getBody(HttpServletRequest request)  {
 
         String body = null;
@@ -124,4 +141,5 @@ public class Controller extends HttpServlet {
         body = stringBuilder.toString();
         return body;
     }
+    */
 }

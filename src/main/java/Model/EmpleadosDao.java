@@ -5,25 +5,89 @@ import java.util.ArrayList;
 
 public class EmpleadosDao implements IDao{
     private static final String SQL_FIND_ALL = "SELECT * FROM EMPLEADOS WHERE 1=1 ";
-
+    private final String SQL_DELETE = "DELETE FROM EMPLEADOS WHERE ID_EMPLEADO=";
+    private final String SQL_UPDATE = "UPDATE EMPLEADOS SET ";
+    private final String SQL_ADD = "INSERT INTO EMPLEADOS (ID_EMPLEADO, ID_DEPARTAMENTO, ID_TRABAJO, NOMBRE, APELLIDOS, FECHA_NACIMIENTO, TELEFONO, CORREO, CONTRASENA, DNI, FECHA_CONTRATACION, SALARIO) VALUES (";
     @Override
     public int add(Object bean) {
+        MotorSQL motorSQL = new MotorSQL();
+        motorSQL.connect();
+        String sql = SQL_ADD;
+        Empleados empleados = (Empleados) bean;
+        sql += empleados.getIdEmpleado();
+        sql += ",'" + empleados.getDepartamento() + "'";
+        sql += ",'" + empleados.getTrabajo() + "'";
+        sql += ",'" + empleados.getNombre() + "'";
+        sql += ",'" + empleados.getApellido() + "'";
+        sql += ",'" + empleados.getFechaNac() + "'";
+        sql += "," + empleados.getTelefono();
+        sql += ",'" + empleados.getCorreo() + "'";
+        sql += ",'" + empleados.getContrasena() + "'";
+        sql += ",'" + empleados.getDNI() + "'";
+        sql += ",'" + empleados.getFechaCont() + "'";
+        sql += "," + empleados.getSalario();
+        sql += ")";
+
+        int filasModificadas = motorSQL.execute(sql);
+        motorSQL.disconnect();
+        return filasModificadas;
+    }
+
+    @Override
+    public int delete(Integer id) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int delete(Integer e) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    public int delete(String id) {
 
-    @Override
-    public int delete(String bean) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int resp = 0;
+        MotorSQL motor = new MotorSQL();
+        motor.connect();
+        System.out.println(SQL_DELETE  + id );
+        try {
+            // Asegurarse de que el ID está encerrado en comillas simples
+            String sql = SQL_DELETE  + id;
+            motor.execute("SET FOREIGN_KEY_CHECKS=0;");
+            resp = Integer.parseInt(String.valueOf(motor.execute(sql)));
+            motor.execute("SET FOREIGN_KEY_CHECKS=1;");
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            motor.disconnect();
+        }
+        if (resp == 0) {
+            System.out.println("Borrado con éxito.");
+        } else {
+            System.out.println("No se pudo borrar.");
+        }
+        return resp;
     }
 
     @Override
     public int update(Object bean) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        MotorSQL motorSQL = new MotorSQL();
+        motorSQL.connect();
+        Empleados empleados = (Empleados) bean;
+        String sql = SQL_UPDATE +
+                "ID_DEPARTAMENTO = '" + empleados.getDepartamento() + "', " +
+                "ID_TRABAJO = '" + empleados.getTrabajo() + "', " +
+                "NOMBRE = '" + empleados.getNombre() + "', " +
+                "APELLIDOS = '" + empleados.getApellido() + "', " +
+                "FECHA_NACIMIENTO = '" + empleados.getFechaNac() + "', " +
+                "TELEFONO = " + empleados.getTelefono() + ", " +
+                "CORREO = '" + empleados.getCorreo() + "', " +
+                "CONTRASENA = '" + empleados.getContrasena() + "', " +
+                "DNI = '" + empleados.getDNI() + "', " +
+                "FECHA_CONTRATACION = '" + empleados.getFechaCont() + "', " +
+                "SALARIO = " + empleados.getSalario() +
+                " WHERE ID_EMPLEADO = " + empleados.getIdEmpleado();
+        System.out.println(sql);
+
+        int filasModificadas = motorSQL.execute(sql);
+        motorSQL.disconnect();
+
+        return filasModificadas;
     }
 
     @Override
@@ -83,8 +147,8 @@ public class EmpleadosDao implements IDao{
                 empleado.setSalario(rs.getInt("SALARIO"));
                 empleado.setContrasena(rs.getString("CONTRASENA"));
                 empleado.setTelefono(rs.getInt("TELEFONO"));
-                empleado.setFechaNac(rs.getDate("FECHA_NACIMIENTO"));
-                empleado.setFechaCont(rs.getDate("FECHA_CONTRATACION"));
+                empleado.setFechaNac(rs.getString("FECHA_NACIMIENTO"));
+                empleado.setFechaCont(rs.getString("FECHA_CONTRATACION"));
                 empleado.setTrabajo(rs.getString("ID_TRABAJO"));
                 empleado.setDepartamento(rs.getString("ID_Departamento"));
 
