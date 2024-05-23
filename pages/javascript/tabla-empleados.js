@@ -37,14 +37,14 @@ const printEmployees = (employees) => {
 
         const row = document.createElement('tr');
         row.innerHTML = `
+            <td>${_idEmpleado}</td>
+            <td>${_idDepartamento}</td>
+            <td>${_idTrabajo}</td>
             <td>${_nombre}</td>
             <td>${_apellidos}</td>
             <td>${_DNI}</td>
             <td>${_correo}</td>
             <td>${_contrasena}</td>
-            <td>${_idDepartamento}</td>
-            <td>${_idTrabajo}</td>
-            <td>${_idEmpleado}</td>
             <td>${_telefono}</td>
             <td>${_salario}</td>
             <td>${_fechaNac}</td>
@@ -56,13 +56,17 @@ const printEmployees = (employees) => {
 
 const toggleEmployees = () => {
     const table = document.getElementById('tabla-empleados');
+    const boton = document.getElementById('boton-find')
     if (table.style.display === 'none') {
         if (!employeesLoaded) {
             fetchEmployees();
+            boton.innerText='See Less';
         } else {
+            boton.innerText='See Less';
             table.style.display = 'table';
         }
     } else {
+        boton.innerText='See All';
         table.style.display = 'none';
     }
 }
