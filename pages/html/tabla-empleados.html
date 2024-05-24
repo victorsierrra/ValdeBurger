@@ -12,14 +12,13 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="add-button" onclick="();">Añadir</button>
-        <button onclick="fetchEmployees();">Mostrar</button>
-        <button class="delete-button" onclick="();">Eliminar</button>
+        <button class="add-button" >Añadir</button>
+        <button id="boton-find" onclick="toggleEmployees();">Mostrar</button>
+        <button class="delete-button">Eliminar</button>
     </div>
    
 <h2>Employee Data</h2>
 
-<button onclick="toggleEmployees()" id="boton-find">See All</button>
 
 <table id="tabla-empleados">
     <thead> 
