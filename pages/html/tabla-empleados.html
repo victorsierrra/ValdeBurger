@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <script src="../javascript/tabla-empleados.js"></script>
     <link rel="stylesheet" href="../css/tabla-empleados.css">
     <title>Employee Data</title>
 </head>
@@ -18,26 +19,27 @@
    
 <h2>Employee Data</h2>
 
+<button onclick="toggleEmployees()" id="boton-find">See All</button>
+
 <table id="tabla-empleados">
     <thead> 
         <tr>
             <th>EMPLOYEE_ID</th>
+            <th>Department Id</th>
+            <th>Job ID</th>
+            <th>NAME</th>
             <th>Surname</th>
             <th>DNI</th>
             <th>Email</th>
             <th>Password</th>
-            <th>Department Id</th>
-            <th>Job ID</th>
-            <th>NAME</th>
             <th>Telephone</th>
             <th>Salary</th>
             <th>Date of Birth</th>
-            <th>Date of recruitment</th>
+            <th>Hire Date</th>
         </tr>
     </thead>
     <tbody>
     </tbody>
 </table>
-<script src="../javascript/tabla-empleados.js"></script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 const urlEmployees = 'http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=EMPLEADOS.FIND_ALL';
+let employeesLoaded = false;
 
-const fetchEmployees = async ()=> {
-    try{
+const fetchEmployees = async () => {
+    try {
         const result = await fetch(urlEmployees);
         const data = await result.json();
         console.log('Empleados obtenidos de la API: ', data);
         printEmployees(data);
-    }catch(error){
+        employeesLoaded = true;
+    } catch (error) {
         console.log('Error al obtener datos de la API: ', error);
     }
 }
@@ -14,7 +16,8 @@ const fetchEmployees = async ()=> {
 const printEmployees = (employees) => {
     const table = document.getElementById('tabla-empleados');
     const tbody = table.querySelector('tbody');
-    table.style.display= 'table';
+    tbody.innerHTML = ''; // Limpiar el contenido anterior
+    table.style.display = 'table';
 
     employees.forEach(employee => {
         const {
@@ -34,20 +37,36 @@ const printEmployees = (employees) => {
 
         const row = document.createElement('tr');
         row.innerHTML = `
-        <td>${_idEmpleado}</td>
-        <td>${_apellidos}</td>
-        <td>${_DNI}</td>
-        <td>${_correo}</td>
-        <td>${_contrasena}</td>
-        <td>${_idDepartamento}</td>
-        <td>${_idTrabajo}</td>
-        <td>${_nombre}</td>
-        <td>${_telefono}</td>
-        <td>${_salario}</td>
-        <td>${_fechaNac}</td>
-        <td>${_fechaCont}</td>
+            <td>${_idEmpleado}</td>
+            <td>${_idDepartamento}</td>
+            <td>${_idTrabajo}</td>
+            <td>${_nombre}</td>
+            <td>${_apellidos}</td>
+            <td>${_DNI}</td>
+            <td>${_correo}</td>
+            <td>${_contrasena}</td>
+            <td>${_telefono}</td>
+            <td>${_salario}</td>
+            <td>${_fechaNac}</td>
+            <td>${_fechaCont}</td>
         `;
         tbody.appendChild(row);
-    })
+    });
 }
-//fetchEmployees();
+
+const toggleEmployees = () => {
+    const table = document.getElementById('tabla-empleados');
+    const boton = document.getElementById('boton-find')
+    if (table.style.display === 'none') {
+        if (!employeesLoaded) {
+            fetchEmployees();
+            boton.innerText='See Less';
+        } else {
+            boton.innerText='See Less';
+            table.style.display = 'table';
+        }
+    } else {
+        boton.innerText='See All';
+        table.style.display = 'none';
+    }
+}
