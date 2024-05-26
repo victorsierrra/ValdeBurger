@@ -1,6 +1,7 @@
 const url = "http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=CLIENTES.ADD";
 
     function registrarCliente() {
+        console.log('Funciona')
         const cliente = {
             _idCliente: 0,
             _nombre: document.getElementById('cliente-nombre').value,

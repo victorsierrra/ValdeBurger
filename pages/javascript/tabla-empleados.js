@@ -53,16 +53,7 @@ const printEmployees = (employees) => {
         tbody.appendChild(row);
     });
 }
-    // Evento para eliminar un producto
-    const deleteButton = document.getElementById('delete-button');
-    deleteButton.addEventListener('click', () => {
-        const productId = prompt('Ingrese el ID del producto que desea eliminar:');
-        if (productId !== null && productId.trim() !== '') {
-            deleteProduct(productId);
-        } else {
-            alert('Debe ingresar un ID válido.');
-        }
-    });
+
 
 const toggleEmployees = () => {
     const table = document.getElementById('tabla-empleados');
@@ -70,13 +61,41 @@ const toggleEmployees = () => {
     if (table.style.display === 'none') {
         if (!employeesLoaded) {
             fetchEmployees();
-            boton.innerText='See Less';
         } else {
-            boton.innerText='See Less';
             table.style.display = 'table';
         }
     } else {
-        boton.innerText='See All';
         table.style.display = 'none';
     }
 }
+const deleteEmployee = async (idEmpleado) => {
+    try {
+        const urlDeleteEmpleado = `http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=EMPLEADOS.DELETE&ID_EMPLEADO=${idEmpleado}`;
+        await fetch(urlDeleteEmpleado, {
+            method: 'DELETE'
+        })
+            alert('Empleado eliminado.');
+    } catch (error) {
+        console.error('Error al eliminar al empleado:', error);
+    }
+};
+const toggleEmployeeDelete = () => {
+    const formulario = document.getElementById('formulario-delete');
+    if(formulario.style.display === 'none'){
+        formulario.style.display = 'block'
+    }
+    else{
+        formulario.style.display = 'none'
+    }
+}
+
+
+document.getElementById('formulario-delete').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const idEmpleado = document.getElementById('casilla-id').value;
+    if (idEmpleado) {
+        deleteEmployee(idEmpleado);
+    } else {
+        alert('Debe ingresar un ID válido.');
+    }
+});

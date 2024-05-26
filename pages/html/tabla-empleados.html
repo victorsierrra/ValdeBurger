@@ -6,15 +6,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
-    <script src="../javascript/tabla-empleados.js"></script>
     <link rel="stylesheet" href="../css/tabla-empleados.css">
     <title>Employee Data</title>
 </head>
 <body>
     <div class="button-container">
+        <a href="./homeadmin.html"><button id="home-admin">HOME</button></a>
         <button class="add-button" >Añadir</button>
         <button id="boton-find" onclick="toggleEmployees();">Mostrar</button>
-        <button id="delete-button">Eliminar</button>
+        <button id="boton-delete" onclick="toggleEmployeeDelete();">Eliminar</button>
     </div>
    
 <h2>Employee Data</h2>
@@ -40,5 +40,17 @@
     <tbody>
     </tbody>
 </table>
+<div class="div-delete">
+    <form id="formulario-delete">
+        <div class="peticion-id">
+            <p>ID to delete</p>
+            <input type="text" id="casilla-id" required placeholder>
+        </div>
+        <div class="confirmacion">
+            <button id="delete-button">CONFIRM</button>
+        </div>
+    </form>
+</div>
+<script src="../javascript/tabla-empleados.js"></script>
 </body>
 </html>

@@ -11,9 +11,9 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="add-button" onclick="();">Añadir</button>
-        <button onclick="fetchClientes();">Mostrar</button>
-        <button class="delete-button" onclick="();">Eliminar</button>
+        <button class="add-button" >Añadir</button>
+        <button id="boton-find" onclick="toggleClientes();">Mostrar</button>
+        <button id="boton-delete" onclick="toggleClientesDelete();">Eliminar</button>
     </div>
    
 <h2>Clients</h2>
@@ -32,6 +32,19 @@
     <tbody>
     </tbody>
 </table>
+<div class="div-delete">
+    <form id="formulario-delete">
+        <div class="peticion-id">
+            <p>ID to delete</p>
+            <input type="text" id="casilla-id" required placeholder>
+        </div>
+        <div class="confirmacion">
+            <button id="delete-button">CONFIRM</button>
+        </div>
+    </form>
+</div>
+
+
 <script src="../javascript/clients.js"></script>
 </body>
 </html>

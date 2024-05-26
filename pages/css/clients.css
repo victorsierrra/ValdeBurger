@@ -58,9 +58,35 @@ button:hover {
 .add-button:hover {
     background-color: #218838;
 }
-.delete-button {
+#boton-delete {
     background-color: #dc3545;
 }
-.delete-button:hover {
+#boton-delete:hover {
     background-color: #c82333;
+}
+.peticion-id p{
+    color: #ffc515;
+}
+
+.peticion-id p , .peticion-id input, .confirmacion button{
+    margin: 10px;
+    font-family: "Kavoon", sans-serif;
+}
+.confirmacion button{
+    width: 100px;
+    height: 30px;
+    background-color: #ffc515;
+}
+
+#formulario-delete{
+    background-color: #2F2D2E;
+    width: 250px;
+    border-radius: 8px;
+    display: none;
+    height: 150px;
+}
+.div-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
