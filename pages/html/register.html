@@ -78,26 +78,27 @@
                 <p>DO YOU ALREADY HAVE AN ACCOUNT? <a href="./login.html">START SESSION</a></p>
               </div>
               <div class="registro-nombre">
-                <input type="text" id="nombre" name="Nombre" required placeholder="Nombre">
+                <input type="text" id="cliente-nombre" required placeholder="Name">
               </div>
               <div class="registro-apellido">
-                <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
+                <input type="text" id="cliente-apellido"  required placeholder="Surname">
               </div>
               <div class="registro-fecha">
-                <input type="date" id="fecha de nacimiento" name="fecha de nacimientro" required placeholder="Fecha de Nacimiento">
+                <input type="date" id="cliente-fecha-nacimiento" required placeholder="Date of Birth">
               </div>
               <div class="registro-correo">
-                <input type="email" id="correo" name="correo" required placeholder="E-mail">
+                <input type="email" id="cliente-correo"  required placeholder="E-mail">
               </div>
               <div class="registro-contra">
-                <input type="password" id="contraseña" name="contraseña" required placeholder="Contraseña">
+                <input type="password" id="cliente-contrasena"  required placeholder="Password">
               </div>
               <div class="registrarse">
-                <button type="submit">REGISTER</button>
+                <button  onclick="registrarCliente()">REGISTER</button>
               </div>
             </form> 
           </div>                 
         </div>
+        <script src="../javascript/registerclientes.js"></script>
   </body>
   <footer>
     <div class="footer-content">

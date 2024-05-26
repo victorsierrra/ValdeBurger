@@ -53,6 +53,16 @@ const printEmployees = (employees) => {
         tbody.appendChild(row);
     });
 }
+    // Evento para eliminar un producto
+    const deleteButton = document.getElementById('delete-button');
+    deleteButton.addEventListener('click', () => {
+        const productId = prompt('Ingrese el ID del producto que desea eliminar:');
+        if (productId !== null && productId.trim() !== '') {
+            deleteProduct(productId);
+        } else {
+            alert('Debe ingresar un ID válido.');
+        }
+    });
 
 const toggleEmployees = () => {
     const table = document.getElementById('tabla-empleados');
