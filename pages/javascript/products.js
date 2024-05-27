@@ -1,5 +1,6 @@
 const urlProducto = 'http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=PRODUCTO.FIND_ALL';
 const urlAdd = "http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=PRODUCTO.ADD";
+const urlUpdate = "http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=PRODUCTO.UPDATE";
 let productosLoaded = false;
 const fetchProducto = async ()=> {
     try{
@@ -99,6 +100,37 @@ const toggleProductAdd = () => {
     else{
         formulario.style.display = 'none'
     }
+}
+function updateProducto() {
+    const producto = {
+        _idProducto: document.getElementById('casilla-id-add').value,
+        _categoria: document.getElementById('casilla-cate').value,
+        _nombre: document.getElementById('casilla-name').value,
+        _descripcion: document.getElementById('casilla-description').value,
+        _ingredientes: document.getElementById('casilla-ingredientes').value,
+        _precio: document.getElementById('casilla-precio').value,
+        _ruta_imagen: document.getElementById('casilla-imagen').value,
+        _ruta_imagen_alergias1: document.getElementById('casilla-imagen1').value,
+        _ruta_imagen_alergias2: document.getElementById('casilla-imagen2').value,
+        _ruta_imagen_alergias3: document.getElementById('casilla-imagen3').value
+    };
+
+    fetch(urlUpdate, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(producto)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            console.log('Producto actualizado exitosamente:', data);
+        } else {
+            console.error('Error en la actualización:', data.message);
+        }
+    })
+    .catch(error => console.error('Error al actualizar producto:', error));
 }
 const deleteProduct = async (idProducto) => {
     try {
