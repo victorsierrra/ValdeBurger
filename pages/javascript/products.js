@@ -1,4 +1,5 @@
 const urlProducto = 'http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=PRODUCTO.FIND_ALL';
+const urlAdd = "http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=PRODUCTO.ADD";
 let productosLoaded = false;
 const fetchProducto = async ()=> {
     try{
@@ -60,6 +61,45 @@ const toggleProductos = () => {
     }
 }
 
+function registrarProducto() {
+    const producto = {
+        _idProducto: document.getElementById('casilla-id-add').value,
+        _categoria: document.getElementById('casilla-cate').value,
+        _nombre: document.getElementById('casilla-name').value,
+        _descripcion: document.getElementById('casilla-description').value,
+        _ingredientes: document.getElementById('casilla-ingredientes').value,
+        _precio: document.getElementById('casilla-precio').value,
+        _ruta_imagen: document.getElementById('casilla-imagen').value,
+        _ruta_imagen_alergias1: document.getElementById('casilla-imagen1').value,
+        _ruta_imagen_alergias2: document.getElementById('casilla-imagen2').value,
+        _ruta_imagen_alergias3: document.getElementById('casilla-imagen3').value
+    };
+
+    fetch(urlAdd, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(producto)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
+    .then(data => console.log('Success:', data))
+    .catch(error => console.error('Error:', error));
+}
+const toggleProductAdd = () => {
+    const formulario = document.getElementById('formulario-add');
+    if(formulario.style.display === 'none'){
+        formulario.style.display = 'block'
+    }
+    else{
+        formulario.style.display = 'none'
+    }
+}
 const deleteProduct = async (idProducto) => {
     try {
         const urlDeleteProducto = `http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=PRODUCTO.DELETE&ID_PRODUCTO=${idProducto}`;

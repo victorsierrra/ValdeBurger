@@ -11,9 +11,10 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="add-button" >Añadir</button>
+        <button id="boton-add" onclick="toggleProductAdd();" >Añadir</button>
         <button onclick="toggleProductos();">Mostrar</button>
         <button id="boton-delete" onclick="toggleProductDelete();"  >Eliminar</button>
+        <button id="boton-update">Actualizar</button>
     </div>
    
 <h2>Products</h2>
@@ -46,6 +47,55 @@
             <button id="delete-button">CONFIRM</button>
         </div>
     </form>
+</div>
+<div class="div-add">
+    <div id="formulario-add">
+        <div class="row">
+            <div class="agregar-id">
+                <p>ID to add</p>
+                <input type="text" id="casilla-id-add" required placeholder>
+            </div>
+            <div class="agregar-categoria">
+                <p>ID Category to add</p>
+                <input type="text" id="casilla-cate" required placeholder>
+            </div>
+        </div>
+        <div class="agregar-nombre">
+                <p>Name to add</p>
+                <input type="text" id="casilla-name" required placeholder>
+        </div>
+        <div class="agregar-descripcion">
+            <p>Description to add</p>
+            <input type="text" id="casilla-description">
+        </div>
+        <div class="agregar-precio">
+            <p>Price to add</p>
+            <input type="text" id="casilla-precio" required placeholder>
+        </div>
+        <div class="agregar-ingredientes">
+            <p>Ingredients to add</p>
+            <input type="text" id="casilla-ingredientes">
+        </div>
+        <div class="agregar-imagen">
+            <p>Imagen to add</p>
+            <input type="text" id="casilla-imagen">
+        </div>
+        <div class="agregar-imagen">
+            <p>Imagen allergies to add</p>
+            <input type="text" id="casilla-imagen1">
+        </div>
+        <div class="agregar-imagen">
+            <p>Imagen allergies to add</p>
+            <input type="text" id="casilla-imagen2">
+        </div>
+        <div class="agregar-imagen">
+            <p>Imagen allergies to add</p>
+            <input type="text" id="casilla-imagen3">
+        </div>
+        <div class="confirmacion">
+            <button id="add-button" onclick="registrarProducto();">CONFIRM</button>
+        </div>
+    </div>
 </div>
 <script src="../javascript/products.js"></script>
 </body>

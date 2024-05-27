@@ -52,10 +52,10 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-.add-button {
+#boton-add {
     background-color: #28a745;
 }
-.add-button:hover {
+#boton-add:hover {
     background-color: #218838;
 }
 #boton-delete {
@@ -63,6 +63,9 @@ button:hover {
 }
 #boton-delete:hover {
     background-color: #c82333;
+}
+#boton-update{
+    background-color: #FFAD21;
 }
 .peticion-id p{
     color: #ffc515;
@@ -77,7 +80,9 @@ button:hover {
     height: 30px;
     background-color: #ffc515;
 }
-
+.div-add p{
+    color: #ffc515;
+}
 #formulario-delete{
     background-color: #2F2D2E;
     width: 250px;
@@ -85,8 +90,70 @@ button:hover {
     display: none;
     height: 150px;
 }
-.div-delete{
+#formulario-add {
+    background-color: #2F2D2E;
+    width: 600px;
+    border-radius: 8px;
+    height: 800px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.div-delete, .div-add {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.div-add {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.row .agregar-id,
+.row .agregar-categoria,
+.row .agregar-nombre {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.row .agregar-id input,
+.row .agregar-categoria input,
+.agregar-nombre input {
+    width: 83%;
+}
+
+.agregar-descripcion,
+.agregar-precio,
+.agregar-nombre,
+.agregar-ingredientes,
+.agregar-imagen,
+.confirmacion {
+    display: block;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.agregar-descripcion p,
+.agregar-precio p,
+.agregar-ingredientes p,
+.agregar-imagen p,
+.agregar-nombre p,
+.confirmacion button {
+    margin-left: 10px;
+}
+
+.agregar-descripcion input,
+.agregar-precio input,
+.agregar-nombre input,
+.agregar-ingredientes input,
+.agregar-imagen input {
+    width: 100%;
 }
