@@ -89,7 +89,7 @@ function registrarProducto() {
         }
         return response.json();
     })
-    .then(data => console.log('Success:', data))
+    .then(data => console.log('Producto editado:', data))
     .catch(error => console.error('Error:', error));
 }
 const toggleProductAdd = () => {
@@ -103,16 +103,16 @@ const toggleProductAdd = () => {
 }
 function updateProducto() {
     const producto = {
-        _idProducto: document.getElementById('casilla-id-add').value,
-        _categoria: document.getElementById('casilla-cate').value,
-        _nombre: document.getElementById('casilla-name').value,
-        _descripcion: document.getElementById('casilla-description').value,
-        _ingredientes: document.getElementById('casilla-ingredientes').value,
-        _precio: document.getElementById('casilla-precio').value,
-        _ruta_imagen: document.getElementById('casilla-imagen').value,
-        _ruta_imagen_alergias1: document.getElementById('casilla-imagen1').value,
-        _ruta_imagen_alergias2: document.getElementById('casilla-imagen2').value,
-        _ruta_imagen_alergias3: document.getElementById('casilla-imagen3').value
+        _idProducto: document.getElementById('casilla-id-upt').value,
+        _categoria: document.getElementById('casilla-cate-upt').value,
+        _nombre: document.getElementById('casilla-name-upt').value,
+        _descripcion: document.getElementById('casilla-description-upt').value,
+        _ingredientes: document.getElementById('casilla-ingredientes-upt').value,
+        _precio: document.getElementById('casilla-precio-upt').value,
+        _ruta_imagen: document.getElementById('casilla-imagen-upt').value,
+        _ruta_imagen_alergias1: document.getElementById('casilla-imagen1-upt').value,
+        _ruta_imagen_alergias2: document.getElementById('casilla-imagen2-upt').value,
+        _ruta_imagen_alergias3: document.getElementById('casilla-imagen3-upt').value
     };
 
     fetch(urlUpdate, {
@@ -145,6 +145,15 @@ const deleteProduct = async (idProducto) => {
 };
 const toggleProductDelete = () => {
     const formulario = document.getElementById('formulario-delete');
+    if(formulario.style.display === 'none'){
+        formulario.style.display = 'block'
+    }
+    else{
+        formulario.style.display = 'none'
+    }
+}
+const toggleProductUpdate = () => {
+    const formulario = document.getElementById('formulario-update');
     if(formulario.style.display === 'none'){
         formulario.style.display = 'block'
     }

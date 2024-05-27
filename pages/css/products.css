@@ -36,6 +36,9 @@ tr:nth-child(even) {
     gap: 20px;
     margin-bottom: 20px;
 }
+input{
+    font-family: "Kavoon", sans-serif;
+}
 button {
     display: block;
     width: 100px;
@@ -67,7 +70,16 @@ button:hover {
 #boton-update{
     background-color: #FFAD21;
 }
-.peticion-id p{
+.button-container a{
+    text-decoration: none;
+}
+#home-admin{
+    background-color: #05D6AA;
+}
+#home-admin:hover{
+    background-color:#04b992 ;
+}
+.peticion-id p, div#formulario-update p{
     color: #ffc515;
 }
 
@@ -84,6 +96,7 @@ button:hover {
     color: #ffc515;
 }
 #formulario-delete{
+    margin-top: 50px;
     background-color: #2F2D2E;
     width: 250px;
     border-radius: 8px;
@@ -91,6 +104,17 @@ button:hover {
     height: 150px;
 }
 #formulario-add {
+    margin-top: 50px;
+    background-color: #2F2D2E;
+    width: 600px;
+    border-radius: 8px;
+    height: 800px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+#formulario-update {
+    margin-top: 50px;
     background-color: #2F2D2E;
     width: 600px;
     border-radius: 8px;
@@ -100,13 +124,13 @@ button:hover {
     gap: 10px;
 }
 
-.div-delete, .div-add {
+.div-delete, .div-add, .div-update {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.div-add {
+.div-add, .div-update {
     width: 100%;
 }
 

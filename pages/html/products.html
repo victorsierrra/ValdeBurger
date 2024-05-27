@@ -13,8 +13,9 @@
     <div class="button-container">
         <button id="boton-add" onclick="toggleProductAdd();" >Añadir</button>
         <button onclick="toggleProductos();">Mostrar</button>
+        <a href="./homeadmin.html"><button id="home-admin">Home</button></a>
         <button id="boton-delete" onclick="toggleProductDelete();"  >Eliminar</button>
-        <button id="boton-update">Actualizar</button>
+        <button id="boton-update" onclick="toggleProductUpdate();">Actualizar</button>
     </div>
    
 <h2>Products</h2>
@@ -93,7 +94,56 @@
             <input type="text" id="casilla-imagen3">
         </div>
         <div class="confirmacion">
-            <button id="add-button" onclick="updateProducto();">CONFIRM</button>
+            <button id="add-button" onclick="registrarProducto();">CONFIRM</button>
+        </div>
+    </div>
+</div>
+<div class="div-update">
+    <div id="formulario-update">
+        <div class="row">
+            <div class="agregar-id">
+                <p>ID to update</p>
+                <input type="text" id="casilla-id-upt" required placeholder>
+            </div>
+            <div class="agregar-categoria">
+                <p>ID Category to add</p>
+                <input type="text" id="casilla-cate-upt" required placeholder>
+            </div>
+        </div>
+        <div class="agregar-nombre">
+                <p>Name to add</p>
+                <input type="text" id="casilla-name-upt" required placeholder>
+        </div>
+        <div class="agregar-descripcion">
+            <p>Description to add</p>
+            <input type="text" id="casilla-description-upt">
+        </div>
+        <div class="agregar-precio">
+            <p>Price to add</p>
+            <input type="text" id="casilla-precio-upt" required placeholder>
+        </div>
+        <div class="agregar-ingredientes">
+            <p>Ingredients to add</p>
+            <input type="text" id="casilla-ingredientes-upt">
+        </div>
+        <div class="agregar-imagen">
+            <p>Imagen to add</p>
+            <input type="text" id="casilla-imagen-upt">
+        </div>
+        <div class="agregar-imagen">
+            <p>Imagen allergies to add</p>
+            <input type="text" id="casilla-imagen1-upt">
+        </div>
+        <div class="agregar-imagen">
+            <p>Imagen allergies to add</p>
+            <input type="text" id="casilla-imagen2-upt">
+        </div>
+        <div class="agregar-imagen">
+            <p>Imagen allergies to add</p>
+            <input type="text" id="casilla-imagen3-upt">
+        </div>
+        <div class="confirmacion">
+            <button id="update-button" onclick="updateProducto();">CONFIRM</button>
         </div>
     </div>
 </div>
