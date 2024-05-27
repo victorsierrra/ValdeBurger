@@ -11,10 +11,11 @@
 </head>
 <body>
     <div class="button-container">
-        <a href="./homeadmin.html"><button id="home-admin">HOME</button></a>
-        <button class="add-button" >Añadir</button>
-        <button id="boton-find" onclick="toggleEmployees();">Mostrar</button>
-        <button id="boton-delete" onclick="toggleEmployeeDelete();">Eliminar</button>
+        <button id="boton-add" onclick="toggleProductAdd();" >Añadir</button>
+        <button onclick="toggleProductos();">Mostrar</button>
+        <a href="./homeadmin.html"><button id="home-admin">Home</button></a>
+        <button id="boton-delete" onclick="toggleProductDelete();"  >Eliminar</button>
+        <button id="boton-update" onclick="toggleProductUpdate();">Actualizar</button>
     </div>
    
 <h2>Employee Data</h2>
@@ -50,6 +51,120 @@
             <button id="delete-button">CONFIRM</button>
         </div>
     </form>
+</div>
+<div class="div-add">
+    <div id="formulario-add">
+        <div class="row">
+            <div class="agregar-id">
+                <p>ID to add</p>
+                <input type="text" id="casilla-id-add" required placeholder>
+            </div>
+            <div class="agregar-departamento">
+                <p>ID Department to add</p>
+                <input type="text" id="casilla-dep" required placeholder>
+            </div>
+            <div class="agregar-trabajo">
+                <p>ID Job to add</p>
+                <input type="text" id="casilla-job" required placeholder>
+            </div>
+        </div>
+        <div class="agregar-nombre">
+                <p>Name to add</p>
+                <input type="text" id="casilla-name" required placeholder>
+        </div>
+        <div class="agregar-apellido">
+            <p>Surname to add</p>
+            <input type="text" id="casilla-surname">
+        </div>
+        <div class="agregar-indentificacion">
+            <p>DNI to add</p>
+            <input type="text" id="casilla-dni" required placeholder>
+        </div>
+        <div class="agregar-correo">
+            <p>E-Mail to add</p>
+            <input type="email" id="casilla-correo">
+        </div>
+        <div class="agregar-contrasena">
+            <p>Password to add</p>
+            <input type="text" id="casilla-contra">
+        </div>
+        <div class="agregar-telefono">
+            <p>Phone to add</p>
+            <input type="number" id="casilla-telefono">
+        </div>
+        <div class="agregar-salario">
+            <p>Salary to add</p>
+            <input type="text" id="casilla-salario">
+        </div>
+        <div class="agregar-fecha-nacimiento">
+            <p>Date of Birth to add</p>
+            <input type="date" id="casilla-fecha-nac">
+        </div>
+        <div class="agregar-fecha-contratacion">
+            <p>Hire Date to add</p>
+            <input type="date" id="casilla-fecha-cont">
+        </div>
+        <div class="confirmacion">
+            <button id="add-button" onclick="registrarProducto();">CONFIRM</button>
+        </div>
+    </div>
+</div>
+<div class="div-update">
+    <div id="formulario-update">
+        <div class="row">
+            <div class="agregar-id">
+                <p>ID to update</p>
+                <input type="text" id="casilla-id-add" required placeholder>
+            </div>
+            <div class="agregar-departamento">
+                <p>ID Department to update</p>
+                <input type="text" id="casilla-dep" required placeholder>
+            </div>
+            <div class="agregar-trabajo">
+                <p>ID Job to update</p>
+                <input type="text" id="casilla-job" required placeholder>
+            </div>
+        </div>
+        <div class="agregar-nombre">
+                <p>Name to update</p>
+                <input type="text" id="casilla-name" required placeholder>
+        </div>
+        <div class="agregar-apellido">
+            <p>Surname to update</p>
+            <input type="text" id="casilla-surname">
+        </div>
+        <div class="agregar-indentificacion">
+            <p>DNI to update</p>
+            <input type="text" id="casilla-dni" required placeholder>
+        </div>
+        <div class="agregar-correo">
+            <p>E-Mail to update</p>
+            <input type="email" id="casilla-correo">
+        </div>
+        <div class="agregar-contrasena">
+            <p>Password to update</p>
+            <input type="text" id="casilla-contra">
+        </div>
+        <div class="agregar-telefono">
+            <p>Phone to update</p>
+            <input type="number" id="casilla-telefono">
+        </div>
+        <div class="agregar-salario">
+            <p>Salary to update</p>
+            <input type="text" id="casilla-salario">
+        </div>
+        <div class="agregar-fecha-nacimiento">
+            <p>Date of Birth to update</p>
+            <input type="date" id="casilla-fecha-nac">
+        </div>
+        <div class="agregar-fecha-contratacion">
+            <p>Hire Date to update</p>
+            <input type="date" id="casilla-fecha-cont">
+        </div>
+        <div class="confirmacion">
+            <button id="update" onclick="registrarProducto();">CONFIRM</button>
+        </div>
+    </div>
 </div>
 <script src="../javascript/tabla-empleados.js"></script>
 </body>
