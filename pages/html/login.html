@@ -73,22 +73,24 @@
             <div class="logo-login">
               <img src="../../imagenes/Logo-ValdeBurger.png" alt="">
             </div>
-            <form id="formulario-iniciosesion">
+            <div id="formulario-iniciosesion">
               <div class ="No-tener-cuenta">
                 <p>DON'T HAVE AN ACCOUNT? <a href="./register.html">REGISTER NOW</a></p>
               </div>
               <div class="iniciosesion-correo">
-                <input type="email" id="correo" name="correo" required placeholder="E-mail">
+                <input type="email" id="login-correo"  required placeholder="E-mail">
               </div>
               <div class="iniciosesion-contra">
-                <input type="password" id="contraseña" name="contraseña" required placeholder="Contraseña">
+                <input type="password" id="login-contra" required placeholder="Password">
               </div>
               <div class="iniciar-sesion">
-                <button type="submit">LOG IN</button>
+                <button onclick="verificarEmpleado();">LOG IN</button>
               </div>
-            </form> 
+            </div> 
+            <div id="message"></div>
           </div>                
         </div>
+        <script src="../javascript/checklogin.js"></script>
   </body>
   <footer>
     <div class="footer-content">
