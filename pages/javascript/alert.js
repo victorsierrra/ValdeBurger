@@ -10,9 +10,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const employeePassword = 'employee123';
 
     if (email === adminEmail && password === adminPassword) {
-        window.location.href = '../../html/homeadmin.html';
+        window.location.href = '../html/homeadmin.html';
     } else if (email === employeeEmail && password === employeePassword) {
-        window.location.href = '../html/homeempleado.html';
+        window.location.href = '../html/homeemployee.html';
     } else {
         Swal.fire("Access Denegade!");
     }
