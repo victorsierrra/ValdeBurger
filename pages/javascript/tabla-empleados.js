@@ -59,7 +59,6 @@ const printEmployees = (employees) => {
 
 const toggleEmployees = () => {
     const table = document.getElementById('tabla-empleados');
-    const boton = document.getElementById('boton-find')
     if (table.style.display === 'none') {
         if (!employeesLoaded) {
             fetchEmployees();

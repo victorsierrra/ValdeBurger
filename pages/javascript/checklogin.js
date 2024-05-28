@@ -11,10 +11,21 @@ async function verificarEmpleado() {
             }
         });
 
+        if (!result.ok) {
+            throw new Error('Error en la solicitud');
+        }
 
         const data = await result.text();
-        alert(data)
-        document.getElementById('message').textContent = data;
+        alert(`ID Cliente recibido: ${data}`);
+
+        // Guarda el ID_CLIENTE en localStorage
+        const idCliente = data.trim();  // Asegúrate de quitar espacios en blanco
+        localStorage.setItem('ID_CLIENTE', idCliente);
+
+        // Puedes usar el idCliente en otras partes de tu código si es necesario
+        console.log('ID_CLIENTE:', idCliente);
+
+        document.getElementById('message').textContent = `ID Cliente: ${idCliente}`;
     } catch (error) {
         console.error('Error:', error);
         document.getElementById('message').textContent = 'E-Mail or Password no valid';

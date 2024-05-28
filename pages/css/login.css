@@ -160,6 +160,9 @@ footer {
 .footer-section ul li a:hover {
   text-decoration: underline;
 }
+#message{
+  color: greenyellow;
+}
 
 .footer-bottom {
   margin-top: 20px;
