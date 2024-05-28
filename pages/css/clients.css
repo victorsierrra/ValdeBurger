@@ -36,6 +36,9 @@ tr:nth-child(even) {
     gap: 20px;
     margin-bottom: 20px;
 }
+input{
+    font-family: "Kavoon", sans-serif;
+}
 button {
     display: block;
     width: 100px;
@@ -52,10 +55,10 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-.add-button {
+#boton-add {
     background-color: #28a745;
 }
-.add-button:hover {
+#boton-add:hover {
     background-color: #218838;
 }
 #boton-delete {
@@ -64,7 +67,19 @@ button:hover {
 #boton-delete:hover {
     background-color: #c82333;
 }
-.peticion-id p{
+#boton-update{
+    background-color: #FFAD21;
+}
+.button-container a{
+    text-decoration: none;
+}
+#home-admin{
+    background-color: #05D6AA;
+}
+#home-admin:hover{
+    background-color:#04b992 ;
+}
+.peticion-id p, div#formulario-update p{
     color: #ffc515;
 }
 
@@ -79,14 +94,75 @@ button:hover {
 }
 
 #formulario-delete{
+    margin-top: 50px;
     background-color: #2F2D2E;
     width: 250px;
     border-radius: 8px;
     display: none;
     height: 150px;
 }
-.div-delete{
+#formulario-update {
+    margin-top: 50px;
+    background-color: #2F2D2E;
+    width: 600px;
+    border-radius: 8px;
+    height: 500px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.div-delete,  .div-update {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.div-update {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.row .agregar-id,
+.row .agregar-nombre{
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.row .agregar-id input,
+.row .agregar-nombre input {
+    width: 83%;
+}
+
+.agregar-apellido,
+.agregar-correo,
+.agregar-contrasena,
+.agregar-fecha-nacimiento,
+.confirmacion {
+    display: block;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.agregar-id p,
+.agregar-nombre p,
+.agregar-apellido p,
+.agregar-correo p,
+.agregar-contrasena p,
+.agregar-fecha-nacimiento p,
+.confirmacion button {
+    margin-left: 10px;
+}
+
+.agregar-apellido input,
+.agregar-correo input,
+.agregar-contrasena input,
+.agregar-fecha-nacimiento input{
+    width: 100%;
 }

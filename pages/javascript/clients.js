@@ -54,7 +54,44 @@ const toggleClientes = () => {
         table.style.display = 'none';
     }
 }
+function updateClientes() {
+    const cliente = {
+        _idCliente: document.getElementById('casilla-id-upt').value,
+        _nombre: document.getElementById('casilla-name-upt').value,
+        _apellidos: document.getElementById('casilla-surname-upt').value,
+        _fecha_nacimiento: document.getElementById('casilla-fecha-nac-upt').value,
+        _correo: document.getElementById('casilla-correo-upt').value,
+        _contrasena: document.getElementById('casilla-contra-upt').value
+    };
 
+    console.log("Datos enviados:", cliente); // Log para depuración
+
+    fetch("http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=CLIENTES.UPDATE", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cliente)
+    })
+    .then(response => {
+        console.log("Respuesta recibida:", response); // Log para depuración
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
+    .then(data => console.log('Empleado actualizado:', data))
+    .catch(error => console.error('Error:', error));
+}
+const toggleClientUpdate = () => {
+    const formulario = document.getElementById('formulario-update');
+    if(formulario.style.display === 'none'){
+        formulario.style.display = 'block'
+    }
+    else{
+        formulario.style.display = 'none'
+    }
+}
 const deleteClient = async (idCliente) => {
     try {
         const urlDeleteCliente = `http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=CLIENTES.DELETE&ID_CLIENTE=${idCliente}`

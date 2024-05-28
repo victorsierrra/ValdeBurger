@@ -11,9 +11,10 @@
 </head>
 <body>
     <div class="button-container">
-        <button class="add-button" >Añadir</button>
-        <button id="boton-find" onclick="toggleClientes();">Mostrar</button>
-        <button id="boton-delete" onclick="toggleClientesDelete();">Eliminar</button>
+        <button onclick="toggleClientes();">Mostrar</button>
+        <a href="./homeadmin.html"><button id="home-admin">Home</button></a>
+        <button id="boton-delete" onclick="toggleClientesDelete();"  >Eliminar</button>
+        <button id="boton-update" onclick="toggleClientUpdate();">Actualizar</button>
     </div>
    
 <h2>Clients</h2>
@@ -43,7 +44,39 @@
         </div>
     </form>
 </div>
-
+<div class="div-update">
+    <div id="formulario-update">
+        <div class="row">
+            <div class="agregar-id">
+                <p>ID to update</p>
+                <input type="text" id="casilla-id-upt" required placeholder>
+            </div>
+            <div class="agregar-nombre">
+                <p>Name to update</p>
+                <input type="text" id="casilla-name-upt" required placeholder>
+            </div>
+        </div>
+        <div class="agregar-apellido">
+            <p>Surname to update</p>
+            <input type="text" id="casilla-surname-upt">
+        </div>
+        <div class="agregar-fecha-nacimiento">
+            <p>Date of Birth to update</p>
+            <input type="date" id="casilla-fecha-nac-upt">
+        </div>
+        <div class="agregar-correo">
+            <p>E-Mail to update</p>
+            <input type="email" id="casilla-correo-upt">
+        </div>
+        <div class="agregar-contrasena">
+            <p>Password to update</p>
+            <input type="text" id="casilla-contra-upt">
+        </div>
+        <div class="confirmacion">
+            <button id="update" onclick="updateClientes();">CONFIRM</button>
+        </div>
+    </div>
+</div>
 
 <script src="../javascript/clients.js"></script>
 </body>

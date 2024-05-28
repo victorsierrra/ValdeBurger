@@ -1,4 +1,6 @@
 const urlEmployees = 'http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=EMPLEADOS.FIND_ALL';
+const urlAdd = "http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=EMPLEADOS.ADD";
+const urlUpdate = "http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=EMPLEADOS.UPDATE";
 let employeesLoaded = false;
 
 const fetchEmployees = async () => {
@@ -68,6 +70,97 @@ const toggleEmployees = () => {
         table.style.display = 'none';
     }
 }
+
+function registrarEmpleado() {
+    const empleado = {
+        _idEmpleado: document.getElementById('casilla-id-add').value,
+        _idDepartamento: document.getElementById('casilla-dep').value,
+        _idTrabajo: document.getElementById('casilla-job').value,
+        _nombre: document.getElementById('casilla-name').value,
+        _apellidos: document.getElementById('casilla-surname').value,
+        _DNI: document.getElementById('casilla-dni').value,
+        _correo: document.getElementById('casilla-correo').value,
+        _contrasena: document.getElementById('casilla-contra').value,
+        _telefono: document.getElementById('casilla-telefono').value,
+        _salario: document.getElementById('casilla-salario').value,
+        _fechaNac: document.getElementById('casilla-fecha-nac').value,
+        _fechaCont: document.getElementById('casilla-fecha-cont').value
+    };
+
+    console.log("Datos enviados:", empleado); // Log para depuración
+
+    fetch("http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=EMPLEADOS.ADD", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(empleado)
+    })
+    .then(response => {
+        console.log("Respuesta recibida:", response); // Log para depuración
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
+    .then(data => console.log('Empleado añadido:', data))
+    .catch(error => console.error('Error:', error));
+}
+const toggleEmpleadoAdd = () => {
+    const formulario = document.getElementById('formulario-add');
+    if(formulario.style.display === 'none'){
+        formulario.style.display = 'block'
+    }
+    else{
+        formulario.style.display = 'none'
+    }
+}
+
+function updateEmpleados() {
+    const empleado = {
+        _idEmpleado: document.getElementById('casilla-id-upt').value,
+        _idDepartamento: document.getElementById('casilla-dep-upt').value,
+        _idTrabajo: document.getElementById('casilla-job-upt').value,
+        _nombre: document.getElementById('casilla-name-upt').value,
+        _apellidos: document.getElementById('casilla-surname-upt').value,
+        _DNI: document.getElementById('casilla-dni-upt').value,
+        _correo: document.getElementById('casilla-correo-upt').value,
+        _contrasena: document.getElementById('casilla-contra-upt').value,
+        _telefono: document.getElementById('casilla-telefono-upt').value,
+        _salario: document.getElementById('casilla-salario-upt').value,
+        _fechaNac: document.getElementById('casilla-fecha-nac-upt').value,
+        _fechaCont: document.getElementById('casilla-fecha-cont-upt').value
+    };
+
+    console.log("Datos enviados:", empleado); // Log para depuración
+
+    fetch("http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=EMPLEADOS.UPDATE", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(empleado)
+    })
+    .then(response => {
+        console.log("Respuesta recibida:", response); // Log para depuración
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
+    .then(data => console.log('Empleado actualizado:', data))
+    .catch(error => console.error('Error:', error));
+}
+const toggleProductUpdate = () => {
+    const formulario = document.getElementById('formulario-update');
+    if(formulario.style.display === 'none'){
+        formulario.style.display = 'block'
+    }
+    else{
+        formulario.style.display = 'none'
+    }
+}
+
 const deleteEmployee = async (idEmpleado) => {
     try {
         const urlDeleteEmpleado = `http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=EMPLEADOS.DELETE&ID_EMPLEADO=${idEmpleado}`;
