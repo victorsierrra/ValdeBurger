@@ -4,9 +4,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const adminEmail = 'admin@example.com';
+    const adminEmail = 'admin@valdeburger.com';
     const adminPassword = 'admin123';
-    const employeeEmail = 'employee@example.com';
+    const employeeEmail = 'employee@valdeburger.com';
     const employeePassword = 'employee123';
 
     if (email === adminEmail && password === adminPassword) {

@@ -166,7 +166,46 @@ footer {
   .footer-bottom {
     margin-top: 20px;
   }
-  
+
+.popup {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+#boton-link{
+  background-color: #2F2D2E;
+  font-family: "Kavoon", sans-serif;
+  color: #FDFFFC;
+  cursor: pointer;
+}
+#boton-link :hover{
+  background-color: #F14A41;
+}
+.popup-content {
+  background-color: #ffc515;
+  border-radius: 8px;
+  color: #f14a41;
+  padding: 10px;
+  border: 1px solid #f14a41;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: #f14a41;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
   .footer-bottom p {
     margin: 0 auto;
     font-weight: bold;

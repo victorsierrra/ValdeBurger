@@ -5,8 +5,11 @@
 .pagina-actual{
   color:#F14A41 ;
 }
-.pagina-actual:hover{
+.icono-carrito svg:hover{
   color:#FDFFFC ;
+}
+.icono-carrito svg{
+  color: #F14A41;
 }
 
 .navbar {

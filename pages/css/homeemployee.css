@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    background: linear-gradient(to right, #ee1000, #ffc515);
 }
 
 .content-container {
@@ -31,37 +31,14 @@ h2, h1 {
     font-size: 2.5rem;
 }
 
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-input:focus {
-    border-color: #4facfe;
-    outline: none;
-}
 
 button {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #4facfe;
+    background-color: #F14A41;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -72,7 +49,7 @@ button {
     margin-top: 20px;
     padding: 12px 25px;
     border-radius: 5px;
-    background-color: #4facfe;
+    background-color: #F14A41;
     color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
@@ -81,7 +58,7 @@ button {
 }
 
 .button-link:hover {
-    background-color: #00c7fe;
+    background-color: #ffc515;
     transform: translateY(-5px);
 }
 
