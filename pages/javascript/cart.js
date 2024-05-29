@@ -80,6 +80,16 @@ function registrarPedido() {
 
         return response.json();
     })
-    .then(data => console.log('Pedido registrado:', data))
+    .then(data => console.log('Pedido registrado:', data),
+    Swal.fire({
+        title: "ORDER OK!",
+        text: "Thank you! Enjoy it",
+        imageUrl: "../../imagenes../../imagenes/Logo-ValdeBurger (2).png",
+        imageWidth: 400,
+        imageHeight: 400,
+        imageAlt: "Custom image",
+        confirmButtonColor: "#ffc515",
+        
+      }))
     .catch(error => console.error('Error:', error));
 }

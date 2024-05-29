@@ -14,10 +14,10 @@ function addToCart(product, price) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     Swal.fire({
-        title: 'Producto añadido',
-        html: `<strong>${product}</strong> se ha añadido al carrito`,
+        title: 'Product add',
+        html: `<strong>${product}</strong> is added the cart`,
         icon: 'success',
-        confirmButtonText: 'Aceptar',
+        confirmButtonText: 'Accept',
         confirmButtonColor: '#e74c3c'
     });
 }

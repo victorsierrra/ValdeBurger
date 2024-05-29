@@ -101,7 +101,7 @@ const createProductCard = (product) => {
             <div class="card-back">
                 ${product.ingredients ? `<div class="card-title">INGREDIENTS:</div>` : ''}
                 ${product.ingredients ? `<div class="card-description">${product.ingredients}</div>` : ''}
-                <button class="add-to-cart-button" onclick="addToCart('${product.name}', ${product.price})">Añadir al Carrito</button>
+                <button class="add-to-cart-button" onclick="addToCart('${product.name}', ${product.price})">Add to the cart</button>
             </div>
         </div>
     `;

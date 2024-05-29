@@ -137,7 +137,9 @@ button {
     font-family: "Kavoon", sans-serif;
     margin-top: 3px;
 }
-
+#boton-pagar, #boton-carta, .direccion{
+  margin-top: 10px;
+}
 button:hover {
     background-color: #c0392b;
 }

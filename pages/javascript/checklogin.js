@@ -25,9 +25,10 @@ async function verificarEmpleado() {
         // Puedes usar el idCliente en otras partes de tu código si es necesario
         console.log('ID_CLIENTE:', idCliente);
 
-        document.getElementById('message').textContent = `ID Cliente: ${idCliente}`;
+        document.getElementById('message').textContent = `Welcome back`;
     } catch (error) {
         console.error('Error:', error);
+        localStorage.removeItem('ID_CLIENTE');
         document.getElementById('message').textContent = 'E-Mail or Password no valid';
     }
 }
