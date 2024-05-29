@@ -102,7 +102,7 @@ function registrarEmpleado() {
         }
         return response.json();
     })
-    .then(data => console.log('Empleado añadido:', data))
+    .then(data => alert('Empleado añadido:', data))
     .catch(error => console.error('Error:', error));
 }
 const toggleEmpleadoAdd = () => {
@@ -147,7 +147,7 @@ function updateEmpleados() {
         }
         return response.json();
     })
-    .then(data => console.log('Empleado actualizado:', data))
+    .then(data => alert('Empleado actualizado:', data))
     .catch(error => console.error('Error:', error));
 }
 const toggleProductUpdate = () => {

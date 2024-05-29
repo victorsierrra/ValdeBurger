@@ -80,7 +80,7 @@ function updateClientes() {
         }
         return response.json();
     })
-    .then(data => console.log('Empleado actualizado:', data))
+    .then(data => alert('Empleado actualizado:', data))
     .catch(error => console.error('Error:', error));
 }
 const toggleClientUpdate = () => {

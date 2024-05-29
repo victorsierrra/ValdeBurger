@@ -18,6 +18,6 @@ const url = "http://localhost:8080/ValdeBurgerBuck02/Controller?ACTION=CLIENTES.
             },
             body: JSON.stringify(cliente)
         })
-        .then(response => response.json())
+        .then(response => response.json(), alert('Client registered'))
         .catch(error => console.error('Error:', error));
     }

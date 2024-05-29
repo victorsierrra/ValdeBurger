@@ -87,6 +87,7 @@ function registrarProducto() {
         if (!response.ok) {
             throw new Error('Error en la respuesta del servidor');
         }
+        alert('Producto added')
         return response.json();
     })
     .then(data => console.log('Producto editado:', data))
@@ -125,7 +126,7 @@ function updateProducto() {
     .then(response => response.json())
     .then(data => {
         if (data.status === 'success') {
-            console.log('Producto actualizado exitosamente:', data);
+            alert('Product updated :', data);
         } else {
             console.error('Error en la actualización:', data.message);
         }
